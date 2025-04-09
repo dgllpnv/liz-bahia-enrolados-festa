@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import CountdownTimer from '../components/CountdownTimer';
@@ -32,11 +31,11 @@ const Index = () => {
     // Preload gallery images
     const preloadImages = () => {
       const galleryImages = [
-        '/lovable-uploads/377b50cf-623e-48b5-bae3-b3953172486a.png',
-        '/lovable-uploads/074c2280-8f25-4d62-bd6a-a8b05c98e01c.png',
-        '/lovable-uploads/ce35d5eb-e405-4c5a-b3fd-abf06d5b7e95.png',
-        '/lovable-uploads/0a6355f1-e12c-4e86-9eea-161bebd45f0d.png',
-        '/lovable-uploads/228a2b66-0e61-4957-81b3-fa0e98aa8bbf.png',
+        '/gallery/photo1.jpg',
+        '/gallery/photo2.jpg',
+        '/gallery/photo3.jpg',
+        '/gallery/photo4.jpg',
+        '/gallery/photo5.jpg',
       ];
       
       galleryImages.forEach((src) => {
