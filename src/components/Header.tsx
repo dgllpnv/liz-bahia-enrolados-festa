@@ -13,45 +13,45 @@ const Header = () => {
   return (
     <header className="py-12 px-6 text-center relative z-10">
       <div className="max-w-5xl mx-auto">
-        {/* Crown icon above the title */}
+        {/* Subtle crown icon above the title */}
         <div className="mb-4">
-          <Sparkles className="h-10 w-10 mx-auto text-rapunzel-gold filter drop-shadow-md animate-soft-pulse" />
+          <Sparkles className="h-8 w-8 mx-auto text-rapunzel-gold/80 filter drop-shadow-sm" />
         </div>
         
-        {/* Main title with enhanced royal styling */}
-        <h1 className="tangled-heading mb-3 text-rapunzel-purple-dark">
+        {/* Main title with more subtle styling */}
+        <h1 className="font-cinzel mb-3 text-4xl md:text-5xl text-rapunzel-purple-dark/90">
           Liz Bahia
         </h1>
         
-        {/* Birthday tagline with enhanced age highlight */}
+        {/* Birthday tagline with more delicate age highlight */}
         <div className="relative">
-          <p className="font-dancing text-3xl mb-6 text-rapunzel-purple-dark/80 royal-text-shimmer">
+          <p className="font-dancing text-2xl mb-6 text-rapunzel-purple-dark/70">
             Aniversário de <span className="relative inline-flex items-center justify-center">
-              <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#FFDEE2] to-[#D946EF] opacity-75 blur-md animate-pulse"></span>
-              <span className="relative text-4xl font-bold text-white px-3 py-1 rounded-full bg-[#D946EF] royal-number-shadow">3</span>
+              <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#FFDEE2]/40 to-[#D946EF]/40 opacity-60 blur-sm"></span>
+              <span className="relative text-3xl font-bold text-white px-2.5 py-0.5 rounded-full bg-[#D946EF]/80 royal-number-shadow">3</span>
             </span> anos
           </p>
         </div>
         
-        {/* Enhanced invitation text */}
-        <div className="royal-card p-8 max-w-2xl mx-auto mb-8">
-          <p className="font-cormorant text-xl text-rapunzel-purple-dark/90 mb-4 leading-relaxed">
+        {/* More subtle invitation text */}
+        <div className="bg-white/60 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-rapunzel-purple-dark/10">
+          <p className="font-cormorant text-lg text-rapunzel-purple-dark/80 mb-4 leading-relaxed">
             Sua presença iluminará o reino da nossa princesa Liz em uma celebração encantada inspirada no mundo mágico de Enrolados.
           </p>
           
-          {/* Navigation links with royal styling */}
+          {/* More subtle navigation link */}
           <div className="flex flex-wrap justify-center gap-5 mt-6">
             <button 
               onClick={() => scrollToSection('details')}
-              className="py-2 px-6 bg-rapunzel-purple-dark/90 text-white rounded-lg font-cinzel text-sm tracking-wide royal-button hover:bg-rapunzel-purple-dark/80 transition-all shadow-md"
+              className="py-2 px-6 bg-rapunzel-purple-dark/70 text-white/90 rounded-lg font-cinzel text-sm tracking-wide hover:bg-rapunzel-purple-dark/60 transition-all shadow-sm"
             >
               Detalhes do Evento
             </button>
           </div>
         </div>
         
-        {/* Decorative divider */}
-        <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-rapunzel-purple-dark/40 to-transparent"></div>
+        {/* Subtle divider */}
+        <div className="w-32 h-px mx-auto bg-gradient-to-r from-transparent via-rapunzel-purple-dark/20 to-transparent"></div>
       </div>
     </header>
   );
