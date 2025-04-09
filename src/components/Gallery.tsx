@@ -1,6 +1,13 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 // Updated photos with the new uploaded images
 const photos = [
@@ -26,9 +33,18 @@ const Gallery = () => {
     setCurrentIndex(newIndex);
   };
 
+  // Preload images for smoother transitions
+  useEffect(() => {
+    photos.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <section id="gallery" className="section-container scroll-animation">
-      <h2 className="tangled-heading mb-12 text-[#5D4A8A] font-bold" style={{ textShadow: '0 2px 4px rgba(29, 25, 43, 0.4)' }}>
+      <h2 className="tangled-heading mb-12 text-[#5D4A8A] font-bold text-3xl md:text-4xl" 
+          style={{ textShadow: '0 2px 4px rgba(29, 25, 43, 0.6)' }}>
         Nossa Princesa
       </h2>
       
@@ -38,10 +54,11 @@ const Gallery = () => {
           <div className="absolute inset-0 p-2 border-4 rounded-xl border-rapunzel-gold border-opacity-30"></div>
           
           <div className="relative h-80 md:h-96 overflow-hidden rounded-lg">
-            <div 
-              className="absolute inset-0 bg-cover bg-center transition-all duration-500 transform hover:scale-105"
-              style={{ backgroundImage: `url(${photos[currentIndex]})` }}
-            ></div>
+            <img 
+              src={photos[currentIndex]}
+              alt={`Nossa Princesa ${currentIndex + 1}`}
+              className="absolute inset-0 w-full h-full object-contain transition-all duration-500 transform hover:scale-105"
+            />
             
             {/* Watercolor overlay effect */}
             <div className="absolute inset-0 bg-[url('/watercolor-overlay.png')] bg-cover opacity-20 mix-blend-overlay pointer-events-none"></div>
@@ -50,7 +67,7 @@ const Gallery = () => {
           {/* Navigation buttons */}
           <button 
             onClick={goToPrevious}
-            className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 backdrop-blur-sm hover:bg-opacity-50 p-2 rounded-full transition-all"
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 backdrop-blur-sm hover:bg-opacity-50 p-2 rounded-full transition-all z-10"
             aria-label="Foto anterior"
           >
             <ChevronLeft className="text-rapunzel-purple-dark" />
@@ -58,7 +75,7 @@ const Gallery = () => {
           
           <button 
             onClick={goToNext}
-            className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 backdrop-blur-sm hover:bg-opacity-50 p-2 rounded-full transition-all"
+            className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 backdrop-blur-sm hover:bg-opacity-50 p-2 rounded-full transition-all z-10"
             aria-label="Próxima foto"
           >
             <ChevronRight className="text-rapunzel-purple-dark" />
