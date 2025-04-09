@@ -217,11 +217,12 @@
   /* Inner Light Styling */
   .inner-light-glow {
     animation: inner-light-pulse 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
   }
   
   .inner-light-pulse {
     animation: number-pulse 6s ease-in-out infinite;
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
   }
   
   .inner-light-button {
@@ -242,6 +243,62 @@
   .inner-light {
     animation: inner-light-glow 5s ease-in-out infinite;
     filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.3));
+  }
+  
+  /* Updated Tangled Lantern Styling */
+  .tangled-lantern {
+    @apply absolute;
+    animation: tangled-lantern-float 15s ease-in-out infinite;
+    z-index: 1;
+  }
+  
+  .tangled-lantern-body {
+    @apply relative w-10 h-14 bg-gradient-to-b from-[#FFEFC1] to-[#FFCA7A] rounded-lg mx-auto;
+    box-shadow: 0 0 15px rgba(255, 202, 122, 0.5);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tangled-lantern-body::before {
+    content: '';
+    @apply absolute w-6 h-1 bg-[#FFCA7A] rounded-t-sm left-2 -bottom-1;
+  }
+  
+  .tangled-lantern-body::after {
+    content: '';
+    @apply absolute w-6 h-2 bg-[#FFE18D] opacity-70 rounded-t-lg left-2 top-1;
+    filter: blur(1px);
+  }
+  
+  .tangled-lantern-light {
+    @apply absolute w-8 h-10 bg-[#FFF3D6]/60 rounded-lg blur-sm;
+    transform: translateY(-2px) scale(1.2);
+    z-index: 1;
+  }
+  
+  .tangled-lantern-glow {
+    @apply absolute w-20 h-20 rounded-full;
+    background: radial-gradient(circle, rgba(255,230,153,0.4) 0%, rgba(255,202,122,0.2) 40%, transparent 70%);
+    animation: tangled-lantern-glow 4s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  .tangled-lantern-mini {
+    @apply relative inline-block w-6 h-8 bg-gradient-to-b from-[#FFEFC1] to-[#FFCA7A] rounded-lg;
+    box-shadow: 0 0 8px rgba(255, 202, 122, 0.4);
+    animation: tangled-lantern-float-mini 8s ease-in-out infinite;
+    position: relative;
+  }
+  
+  .tangled-lantern-mini::before {
+    content: '';
+    @apply absolute w-4 h-0.5 bg-[#FFCA7A] rounded-t-sm left-1 -bottom-0.5;
+  }
+  
+  .tangled-lantern-mini::after {
+    content: '';
+    @apply absolute w-4 h-1 bg-[#FFE18D] opacity-70 rounded-t-sm left-1 top-1;
+    filter: blur(1px);
   }
 }
 
@@ -451,3 +508,43 @@
   }
 }
 
+@keyframes tangled-lantern-float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-35px) translateX(0) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes tangled-lantern-float-mini {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes tangled-lantern-glow {
+  0%, 100% { 
+    opacity: 0.7;
+    transform: scale(1.4);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.6);
+  }
+}

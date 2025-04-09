@@ -13,21 +13,23 @@ const Header = () => {
   return (
     <header className="py-12 px-6 text-center relative z-10">
       <div className="max-w-5xl mx-auto">
-        {/* Floating lanterns around the header */}
+        {/* Floating lanterns around the header - more dense arrangement like in Tangled */}
         <div className="absolute inset-0 overflow-hidden">
-          {[1, 2, 3].map((i) => (
+          {Array.from({ length: 12 }).map((_, i) => (
             <div 
               key={`lantern-${i}`}
-              className="absolute lantern-container"
+              className="absolute tangled-lantern"
               style={{
-                top: `${15 + (i * 10)}%`,
-                left: `${10 + (i * 25)}%`,
-                animationDelay: `${i * 0.5}s`
+                top: `${5 + (Math.random() * 90)}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${i * 0.7}s`,
+                opacity: 0.7 + (Math.random() * 0.3),
+                transform: `scale(${0.8 + (Math.random() * 0.5)})`
               }}
             >
-              <div className="lantern-light"></div>
-              <div className="floating-lantern"></div>
-              <div className="lantern-glow"></div>
+              <div className="tangled-lantern-light"></div>
+              <div className="tangled-lantern-body"></div>
+              <div className="tangled-lantern-glow"></div>
             </div>
           ))}
         </div>
@@ -59,7 +61,7 @@ const Header = () => {
           </p>
           
           <p className="font-cormorant text-md text-rapunzel-purple-dark/70 mb-6 leading-relaxed italic">
-            "Assim como as lanternas que iluminam o céu noturno, cada um de nós carrega uma luz interior que brilha de forma única."
+            "Assim como as lanternas que iluminam o céu noturno em Enrolados, cada um de nós carrega uma luz interior que brilha de forma única."
           </p>
           
           {/* Royal navigation link */}
@@ -77,7 +79,7 @@ const Header = () => {
         <div className="relative w-32 h-px mx-auto">
           <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-royal-gold/30 to-transparent"></div>
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-royal-gold/60">
-            <div className="floating-lantern-mini"></div>
+            <div className="tangled-lantern-mini"></div>
           </div>
         </div>
       </div>

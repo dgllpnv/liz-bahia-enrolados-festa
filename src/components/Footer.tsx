@@ -13,24 +13,38 @@ const Footer = () => {
   return (
     <footer className="py-12 text-center text-rapunzel-purple-dark scroll-animation">
       <div className="container mx-auto relative">
-        {/* Enhanced royal decorative elements with floating lanterns */}
+        {/* Decorative lantern display for footer */}
+        <div className="relative h-16 mb-6 overflow-hidden">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div 
+              key={`footer-lantern-${i}`} 
+              className="tangled-lantern-mini absolute"
+              style={{
+                left: `${10 + (i * 20)}%`,
+                top: '0',
+                animationDelay: `${i * 0.4}s`
+              }}
+            ></div>
+          ))}
+        </div>
+        
         <div className="mx-auto w-48 h-px bg-gradient-to-r from-transparent via-[#D4B7EE] to-transparent mb-8"></div>
         
         <div className="flex justify-center gap-8 mb-8">
-          <div className="floating-lantern-mini"></div>
+          <div className="tangled-lantern-mini"></div>
           <div className="w-px h-5 bg-[#D4B7EE]/60"></div>
           <Flower className="h-5 w-5 text-[#D4B7EE] animate-soft-pulse filter drop-shadow-sm" style={{animationDelay: '0.8s'}} />
           <div className="w-px h-5 bg-[#D4B7EE]/60"></div>
-          <div className="floating-lantern-mini" style={{animationDelay: '1.5s'}}></div>
+          <div className="tangled-lantern-mini" style={{animationDelay: '1.5s'}}></div>
         </div>
         
         <p className="font-dancing text-2xl mb-4 text-rapunzel-purple-dark/90 royal-text tracking-wide">
           Esperamos por você neste dia especial!
         </p>
         
-        {/* Inner light message */}
+        {/* Inner light message inspired by Tangled */}
         <p className="font-cormorant text-sm italic mb-6 text-rapunzel-purple-dark/70 max-w-md mx-auto">
-          "As lanternas flutuantes que iluminam o céu são reflexos da luz que brilha dentro de cada um de nós."
+          "As lanternas flutuantes simbolizam esperança e sonhos, assim como a luz que cada um de nós carrega dentro de si."
         </p>
         
         <div className="flex flex-col items-center justify-center">

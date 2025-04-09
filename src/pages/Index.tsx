@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import CountdownTimer from '../components/CountdownTimer';
@@ -53,60 +52,43 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Subtle background with royal elements */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#FFF8E1]/40 to-[#F5F0FD]/40">
-        {/* Very subtle light effect at the top */}
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/20 to-transparent"></div>
+      {/* Tangled inspired night sky with floating lanterns background */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#1A2654] via-[#2C3E7B] to-[#495CA7]/90">
+        {/* Deep night sky effect - darker at top */}
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#101731]/70 to-transparent"></div>
         
-        {/* Floating lanterns in the background */}
-        {Array.from({ length: 8 }).map((_, index) => (
+        {/* Tangled floating lanterns in the background */}
+        {Array.from({ length: 30 }).map((_, index) => (
           <div 
             key={`float-lantern-${index}`}
-            className="absolute royal-lantern"
+            className="absolute tangled-lantern"
             style={{
-              top: `${10 + Math.random() * 80}%`,
+              top: `${(Math.random() * 100)}%`,
               left: `${Math.random() * 100}%`,
-              animation: `lantern-royal-float ${20 + Math.random() * 5}s ease-in-out infinite`,
-              animationDelay: `${index * 2}s`,
-              opacity: 0.7 + (Math.random() * 0.3)
+              animation: `tangled-lantern-float ${15 + Math.random() * 10}s ease-in-out infinite`,
+              animationDelay: `${index * 0.5}s`,
+              opacity: 0.7 + (Math.random() * 0.3),
+              transform: `scale(${0.4 + (Math.random() * 0.8)})`,
+              zIndex: Math.floor(Math.random() * 3)
             }}
           >
-            <div className="floating-lantern"></div>
-            <div className="lantern-royal-glow"></div>
+            <div className="tangled-lantern-light"></div>
+            <div className="tangled-lantern-body"></div>
+            <div className="tangled-lantern-glow"></div>
           </div>
         ))}
         
-        {/* Minimal royal flourishes with reduced opacity */}
-        {Array.from({ length: 3 }).map((_, index) => (
-          <div 
-            key={index}
-            className="absolute royal-flourish"
-            style={{
-              top: `${10 + Math.random() * 80}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${10 + Math.random() * 6}px`,
-              height: `${15 + Math.random() * 10}px`,
-              animation: `flourish-float ${20 + Math.random() * 5}s ease-in-out infinite`,
-              animationDelay: `${index * 3}s`,
-              opacity: 0.15
-            }}
-          >
-            <div className="flourish-glow"></div>
-          </div>
-        ))}
-        
-        {/* Subtle crown icons with reduced opacity */}
-        {Array.from({ length: 2 }).map((_, index) => (
+        {/* Small Royal Embelishments */}
+        {Array.from({ length: 5 }).map((_, index) => (
           <div 
             key={`crown-${index}`}
-            className="absolute text-royal-gold/10 animate-soft-float"
+            className="absolute text-royal-gold/5 animate-soft-float"
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
               animation: `soft-float ${8 + Math.random() * 4}s ease-in-out infinite`,
               animationDelay: `${index * 2.5}s`,
-              transform: `rotate(${Math.random() * 5}deg)`,
-              filter: 'drop-shadow(0 0 1px rgba(255, 215, 0, 0.1))'
+              transform: `rotate(${Math.random() * 5}deg) scale(${0.8 + Math.random() * 0.4})`,
             }}
           >
             <Crown size={index % 2 === 0 ? 18 : 15} />
@@ -139,8 +121,8 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Subtle veil effect */}
-      <div className="fixed inset-0 pointer-events-none bg-white/2 backdrop-blur-[0.2px]"></div>
+      {/* Light veil effect */}
+      <div className="fixed inset-0 pointer-events-none bg-white/5 backdrop-blur-[0.2px]"></div>
     </div>
   );
 };
