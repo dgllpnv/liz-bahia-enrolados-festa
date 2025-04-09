@@ -90,11 +90,11 @@ const DetailItem = ({
     <h4 className="font-cinzel text-lg font-semibold text-[#7E69AB] tracking-wider">
       {label}
     </h4>
-    <p className="font-dancing text-xl text-royal-pink font-bold mt-1">
+    <p className="font-dancing text-xl text-[#9D6FE8] font-bold mt-1">
       {value}
     </p>
     {subtext && 
-      <p className="text-sm text-white mt-2 bg-royal-pink/10 px-4 py-2 rounded-md border border-royal-gold/10 max-w-xs mx-auto">
+      <p className="text-sm text-white mt-2 bg-[#9D6FE8]/10 px-4 py-2 rounded-md border border-royal-gold/10 max-w-xs mx-auto">
         {subtext}
       </p>
     }
@@ -102,7 +102,7 @@ const DetailItem = ({
 );
 
 const QRCodeCard = ({ title, url }: { title: string; url: string }) => (
-  <div className="flex flex-col items-center p-5 bg-gradient-to-b from-white to-royal-pink-light/10 border border-royal-gold/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+  <div className="flex flex-col items-center p-5 bg-gradient-to-b from-white to-[#9D6FE8]/10 border border-royal-gold/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
     <h4 className="font-cinzel text-lg font-semibold text-[#7E69AB] mb-4 tracking-wide">{title}</h4>
     <div className="bg-white p-3 rounded-md mb-4 shadow-sm border border-royal-gold/10">
       <QRCodeSVG 
@@ -117,7 +117,7 @@ const QRCodeCard = ({ title, url }: { title: string; url: string }) => (
       href={url} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="text-sm text-white font-medium bg-gradient-to-r from-royal-pink/90 to-royal-pink px-5 py-1.5 rounded-full hover:shadow-md transition-all duration-300"
+      className="text-sm text-white font-medium bg-gradient-to-r from-[#9D6FE8]/90 to-[#9D6FE8] px-5 py-1.5 rounded-full hover:shadow-md transition-all duration-300"
     >
       Abrir no Maps
     </a>
