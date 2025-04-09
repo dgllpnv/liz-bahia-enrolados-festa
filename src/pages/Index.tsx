@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import CountdownTimer from '../components/CountdownTimer';
@@ -29,6 +28,21 @@ const Index = () => {
     
     // Add scroll event listener
     window.addEventListener('scroll', animateOnScroll);
+    
+    // Handle hash navigation on load
+    const handleHashNavigation = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const targetElement = document.getElementById(hash.substring(1));
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 500); // Delay to ensure DOM is fully loaded
+      }
+    };
+    
+    handleHashNavigation();
     
     // Cleanup
     return () => {
