@@ -29,7 +29,9 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="section-container scroll-animation">
-      <h2 className="tangled-heading mb-12 text-rapunzel-purple-dark">Nossa Princesa</h2>
+      <h2 className="tangled-heading mb-12 text-[#5D4A8A] font-bold" style={{ textShadow: '0 2px 4px rgba(29, 25, 43, 0.4)' }}>
+        Nossa Princesa
+      </h2>
       
       <div className="max-w-3xl mx-auto relative">
         <div className="relative rounded-xl overflow-hidden card-glass p-3">

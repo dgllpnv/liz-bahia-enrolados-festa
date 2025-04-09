@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Sparkles } from 'lucide-react';
@@ -61,7 +60,7 @@ const Header = () => {
       
       {/* Content */}
       <div className={`relative z-20 text-center transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        <h2 className="font-dancing text-3xl md:text-4xl text-rapunzel-gold mb-4 animate-float-slow font-bold drop-shadow-lg">
+        <h2 className="font-dancing text-3xl md:text-4xl text-[#7E69AB] mb-4 animate-float-slow font-bold drop-shadow-lg" style={{ textShadow: '0 0 10px rgba(126, 105, 171, 0.6)' }}>
           Você está convidado para o aniversário de
         </h2>
         
