@@ -62,27 +62,27 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Tangled theme colors
+				// Tangled theme colors - saturação aumentada
 				rapunzel: {
-					purple: '#E5DEFF',
-					'purple-dark': '#D6BCFA',
-					peach: '#FDE1D3',
-					pink: '#FFDEE2',
-					blue: '#D3E4FD',
+					purple: '#E0D6FF',
+					'purple-dark': '#D0ACFF',
+					peach: '#FFD6BE',
+					pink: '#FFD0D8',
+					blue: '#C5DFFF',
 					gold: '#FFD700',
 				},
-				// Royal theme colors - enhanced with lilac, purple, pink, and gold
+				// Royal theme colors - cores mais intensas
 				royal: {
-					gold: '#D4AF37',
+					gold: '#F7C530',          // Dourado mais vibrante
 					cream: '#FFF8E1',
 					beige: '#F5F5DC',
-					burgundy: '#800020',
-					purple: '#5D3A7D',      // Deep royal purple
-					lilac: '#C8A4D4',       // Soft lilac
-					lavender: '#A889D5',    // Medium lavender
-					pink: '#E68FAC',        // Elegant pink
-					'pink-light': '#F8D7E3', // Light pink
-					'gold-light': '#F9E8B8', // Light gold
+					burgundy: '#9B0026',      // Bordô mais intenso
+					purple: '#6D2B9A',        // Roxo mais profundo
+					lilac: '#CC8DE0',         // Lilás mais vibrante
+					lavender: '#9D6FE8',      // Lavanda mais saturado
+					pink: '#FF6B99',          // Rosa mais vibrante
+					'pink-light': '#FFB1D0',  // Rosa claro mais colorido
+					'gold-light': '#FFDA55',  // Dourado claro mais intenso
 				}
 			},
 			borderRadius: {

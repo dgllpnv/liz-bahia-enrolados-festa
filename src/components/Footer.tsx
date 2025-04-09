@@ -15,9 +15,9 @@ const Footer = () => {
       <div className="container mx-auto relative">
         {/* Decorative divider with crown */}
         <div className="flex items-center justify-center mb-8">
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-royal-lilac/40 to-transparent"></div>
-          <Crown className="h-5 w-5 mx-3 text-royal-gold/60" />
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-royal-lilac/40 to-transparent"></div>
+          <div className="w-16 h-px bg-gradient-to-r from-transparent via-royal-lilac/50 to-transparent"></div>
+          <Crown className="h-5 w-5 mx-3 text-royal-gold/80" />
+          <div className="w-16 h-px bg-gradient-to-r from-transparent via-royal-lilac/50 to-transparent"></div>
         </div>
         
         {/* Decorative lantern display for footer - more elegant arrangement */}
@@ -33,13 +33,13 @@ const Footer = () => {
           ))}
         </div>
         
-        <div className="mx-auto w-48 h-px bg-gradient-to-r from-transparent via-royal-lilac/40 to-transparent mb-8"></div>
+        <div className="mx-auto w-48 h-px bg-gradient-to-r from-transparent via-royal-lilac/60 to-transparent mb-8"></div>
         
         <div className="flex justify-center gap-8 mb-8">
           <div className="tangled-lantern-mini"></div>
-          <div className="w-px h-5 bg-royal-lilac/30"></div>
+          <div className="w-px h-5 bg-royal-lilac/40"></div>
           <Flower className="h-5 w-5 text-royal-pink animate-soft-pulse filter drop-shadow-sm" style={{animationDelay: '0.8s'}} />
-          <div className="w-px h-5 bg-royal-lilac/30"></div>
+          <div className="w-px h-5 bg-royal-lilac/40"></div>
           <div className="tangled-lantern-mini" style={{animationDelay: '1.5s'}}></div>
         </div>
         
@@ -48,7 +48,7 @@ const Footer = () => {
         </p>
         
         {/* Inner light message with more elegant styling */}
-        <p className="font-cormorant text-sm md:text-base italic mb-8 text-royal-lavender/90 max-w-md mx-auto leading-relaxed">
+        <p className="font-cormorant text-sm md:text-base italic mb-8 text-royal-lavender max-w-md mx-auto leading-relaxed">
           "As lanternas flutuantes simbolizam esperança e sonhos, assim como a luz que cada um de nós carrega dentro de si."
         </p>
         
@@ -60,14 +60,14 @@ const Footer = () => {
           {/* Back to top button with more elegant styling */}
           <button 
             onClick={scrollToTop}
-            className="flex items-center justify-center gap-2 text-sm text-royal-lavender/80 hover:text-royal-gold transition-colors py-2 px-4 rounded-full border border-royal-lavender/20 hover:border-royal-gold/30"
+            className="flex items-center justify-center gap-2 text-sm text-royal-lavender/90 hover:text-royal-gold transition-colors py-2 px-4 rounded-full border border-royal-lavender/30 hover:border-royal-gold/50"
           >
             <ArrowUp className="h-4 w-4" />
             <span className="font-cinzel text-xs tracking-wider">Voltar ao topo</span>
           </button>
         </div>
         
-        <div className="mx-auto w-40 h-px bg-gradient-to-r from-transparent via-royal-lilac/30 to-transparent mt-10"></div>
+        <div className="mx-auto w-40 h-px bg-gradient-to-r from-transparent via-royal-lilac/40 to-transparent mt-10"></div>
       </div>
     </footer>
   );
