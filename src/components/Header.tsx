@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Crown } from 'lucide-react';
+import { Crown, Lamp } from 'lucide-react';
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,6 +13,25 @@ const Header = () => {
   return (
     <header className="py-12 px-6 text-center relative z-10">
       <div className="max-w-5xl mx-auto">
+        {/* Floating lanterns around the header */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[1, 2, 3].map((i) => (
+            <div 
+              key={`lantern-${i}`}
+              className="absolute lantern-container"
+              style={{
+                top: `${15 + (i * 10)}%`,
+                left: `${10 + (i * 25)}%`,
+                animationDelay: `${i * 0.5}s`
+              }}
+            >
+              <div className="lantern-light"></div>
+              <Lamp size={20} className="text-royal-gold filter drop-shadow-md" />
+              <div className="lantern-glow"></div>
+            </div>
+          ))}
+        </div>
+        
         {/* Royal crown icon above the title */}
         <div className="mb-4">
           <Crown className="h-8 w-8 mx-auto text-royal-gold filter drop-shadow-sm" />
@@ -23,35 +42,44 @@ const Header = () => {
           Liz Bahia
         </h1>
         
-        {/* Birthday tagline with delicate age highlight */}
+        {/* Birthday tagline with delicate lantern-inspired age highlight */}
         <div className="relative">
           <p className="font-cormorant text-2xl mb-6 text-rapunzel-purple-dark/80 italic">
             Aniversário de <span className="relative inline-flex items-center justify-center">
-              <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#FFF8E1]/20 to-[#FFD700]/10 opacity-40 blur-sm"></span>
-              <span className="relative text-2xl font-cormorant font-medium text-royal-gold px-2 py-0.5 rounded-full bg-white/50 border border-[#FFD700]/20">3</span>
+              <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#FFF8E1]/20 to-[#FFD700]/10 opacity-40 blur-sm inner-light-glow"></span>
+              <span className="relative text-2xl font-cormorant font-medium text-royal-gold px-2 py-0.5 rounded-full bg-white/50 border border-[#FFD700]/20 inner-light-pulse">3</span>
             </span> anos
           </p>
         </div>
         
-        {/* Elegant invitation text */}
+        {/* Elegant invitation text with lantern and inner light reference */}
         <div className="bg-white/60 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-royal-gold/10">
           <p className="font-cormorant text-lg text-rapunzel-purple-dark/80 mb-4 leading-relaxed italic">
             Sua presença iluminará o reino da nossa princesa Liz em uma celebração encantada inspirada no mundo mágico de Enrolados.
+          </p>
+          
+          <p className="font-cormorant text-md text-rapunzel-purple-dark/70 mb-6 leading-relaxed italic">
+            "Assim como as lanternas que iluminam o céu, cada um de nós carrega uma luz interior que brilha de forma única."
           </p>
           
           {/* Royal navigation link */}
           <div className="flex flex-wrap justify-center gap-5 mt-6">
             <button 
               onClick={() => scrollToSection('details')}
-              className="py-2 px-6 bg-royal-gold/50 text-white/90 rounded-lg font-cormorant text-sm tracking-wide hover:bg-royal-gold/40 transition-all shadow-sm"
+              className="py-2 px-6 bg-royal-gold/50 text-white/90 rounded-lg font-cormorant text-sm tracking-wide hover:bg-royal-gold/40 transition-all shadow-sm inner-light-button"
             >
               Detalhes do Evento
             </button>
           </div>
         </div>
         
-        {/* Royal flourish divider */}
-        <div className="w-32 h-px mx-auto bg-gradient-to-r from-transparent via-royal-gold/30 to-transparent"></div>
+        {/* Royal flourish divider with mini lanterns */}
+        <div className="relative w-32 h-px mx-auto">
+          <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-royal-gold/30 to-transparent"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-royal-gold/60">
+            <Lamp size={12} className="filter drop-shadow-sm" />
+          </div>
+        </div>
       </div>
     </header>
   );

@@ -146,6 +146,68 @@
     animation: flourish-glow 6s ease-in-out infinite;
     transform: scale(1.3);
   }
+  
+  /* Lantern Styling */
+  .lantern-container {
+    @apply relative flex items-center justify-center;
+    animation: lantern-float 12s ease-in-out infinite;
+  }
+  
+  .lantern-light {
+    @apply absolute w-5 h-8 bg-rapunzel-gold/5 rounded-full blur-md;
+    transform: translateY(-2px);
+  }
+  
+  .lantern-glow {
+    @apply absolute w-14 h-14 rounded-full;
+    background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0.05) 40%, transparent 70%);
+    animation: lantern-glow 4s ease-in-out infinite;
+  }
+  
+  .royal-lantern {
+    @apply absolute flex items-center justify-center;
+    z-index: 2;
+    position: relative;
+    overflow: visible;
+  }
+  
+  .lantern-royal-glow {
+    @apply absolute w-20 h-20 rounded-full;
+    background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, rgba(255,215,0,0.05) 50%, transparent 80%);
+    filter: blur(2px);
+    animation: lantern-glow 5s ease-in-out infinite;
+    transform: scale(1.2);
+  }
+  
+  /* Inner Light Styling */
+  .inner-light-glow {
+    animation: inner-light-pulse 6s ease-in-out infinite;
+  }
+  
+  .inner-light-pulse {
+    animation: number-pulse 6s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+  }
+  
+  .inner-light-button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .inner-light-button::after {
+    content: '';
+    @apply absolute inset-0 bg-white/20 opacity-0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .inner-light-button:hover::after {
+    opacity: 1;
+  }
+  
+  .inner-light {
+    animation: inner-light-glow 5s ease-in-out infinite;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.3));
+  }
 }
 
 @font-face {

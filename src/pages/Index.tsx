@@ -6,7 +6,7 @@ import EventDetails from '../components/EventDetails';
 import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { Crown } from 'lucide-react';
+import { Crown, Lamp } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -58,6 +58,24 @@ const Index = () => {
         {/* Very subtle light effect at the top */}
         <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/20 to-transparent"></div>
         
+        {/* Floating lanterns in the background */}
+        {Array.from({ length: 5 }).map((_, index) => (
+          <div 
+            key={`float-lantern-${index}`}
+            className="absolute royal-lantern"
+            style={{
+              top: `${10 + Math.random() * 80}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `lantern-royal-float ${20 + Math.random() * 5}s ease-in-out infinite`,
+              animationDelay: `${index * 2}s`,
+              opacity: 0.4 + (Math.random() * 0.2)
+            }}
+          >
+            <Lamp size={16 + Math.floor(Math.random() * 8)} className="text-royal-gold filter drop-shadow-md" />
+            <div className="lantern-royal-glow"></div>
+          </div>
+        ))}
+        
         {/* Minimal royal flourishes with reduced opacity */}
         {Array.from({ length: 3 }).map((_, index) => (
           <div 
@@ -70,7 +88,7 @@ const Index = () => {
               height: `${15 + Math.random() * 10}px`,
               animation: `flourish-float ${20 + Math.random() * 5}s ease-in-out infinite`,
               animationDelay: `${index * 3}s`,
-              opacity: 0.2
+              opacity: 0.15
             }}
           >
             <div className="flourish-glow"></div>
