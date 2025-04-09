@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
@@ -101,6 +102,26 @@
   .text-shadow-lg {
     text-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
   }
+  
+  /* Novos estilos mais delicados */
+  .delicate-border {
+    @apply border border-pink-200 border-opacity-40 rounded-xl p-3;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.2);
+  }
+  
+  .delicate-glow {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+  }
+  
+  .flower-decoration::before {
+    content: '✿';
+    @apply absolute text-2xl text-rapunzel-pink text-opacity-60 -rotate-12;
+  }
+  
+  .flower-decoration::after {
+    content: '✿';
+    @apply absolute text-xl text-rapunzel-purple-dark text-opacity-60 rotate-12;
+  }
 }
 
 @font-face {
@@ -153,4 +174,34 @@
   border-radius: 100%;
   transform-origin: 50% 0;
   z-index: -1;
+}
+
+/* Animações mais suaves */
+@keyframes soft-pulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 4s ease-in-out infinite;
+}
+
+@keyframes soft-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-soft-float {
+  animation: soft-float 6s ease-in-out infinite;
+}
+
+/* Decorações florais */
+.floral-corner::before {
+  content: '❀';
+  @apply absolute -top-3 -left-3 text-2xl text-rapunzel-pink text-opacity-70 rotate-12;
+}
+
+.floral-corner::after {
+  content: '❀';
+  @apply absolute -bottom-3 -right-3 text-2xl text-rapunzel-purple-dark text-opacity-70 -rotate-12;
 }

@@ -29,8 +29,6 @@ const Index = () => {
     // Add scroll event listener
     window.addEventListener('scroll', animateOnScroll);
     
-    // Preload gallery images - Removido daqui pois agora está no componente Gallery
-    
     // Cleanup
     return () => {
       window.removeEventListener('scroll', animateOnScroll);
@@ -39,20 +37,36 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Animated background elements - floating lanterns */}
+      {/* Background mais delicado - lanternas flutuantes mais sutis */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: 10 }).map((_, index) => (
           <div 
             key={index}
-            className="absolute w-4 h-6 bg-rapunzel-gold opacity-30 rounded-full"
+            className="absolute w-4 h-6 bg-rapunzel-gold opacity-20 rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              boxShadow: '0 0 10px rgba(255, 215, 0, 0.5)',
-              animation: `lantern-float ${15 + Math.random() * 5}s linear infinite`,
-              animationDelay: `${index * 1.5}s`
+              boxShadow: '0 0 10px rgba(255, 215, 0, 0.3)',
+              animation: `lantern-float ${15 + Math.random() * 8}s linear infinite`,
+              animationDelay: `${index * 2}s`
             }}
           ></div>
+        ))}
+        
+        {/* Pequenas flores decorativas flutuantes */}
+        {Array.from({ length: 6 }).map((_, index) => (
+          <div 
+            key={`flower-${index}`}
+            className="absolute text-xl text-rapunzel-pink text-opacity-15 animate-soft-float"
+            style={{
+              top: `${10 + Math.random() * 80}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${index * 1.2}s`,
+              transform: `rotate(${Math.random() * 45}deg)`
+            }}
+          >
+            ❀
+          </div>
         ))}
       </div>
       
@@ -81,15 +95,15 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Decorative hair strands */}
+      {/* Decorative hair strands mais delicados */}
       <div className="fixed bottom-0 left-0 w-1/3 h-60 pointer-events-none z-0">
-        <div className="hair-strand animate-hair-flow" style={{ left: '10%', animationDelay: '0s' }}></div>
-        <div className="hair-strand animate-hair-flow" style={{ left: '25%', animationDelay: '0.5s' }}></div>
+        <div className="hair-strand animate-hair-flow" style={{ left: '10%', animationDelay: '0s', opacity: '0.4' }}></div>
+        <div className="hair-strand animate-hair-flow" style={{ left: '25%', animationDelay: '0.5s', opacity: '0.3' }}></div>
       </div>
       
       <div className="fixed bottom-0 right-0 w-1/3 h-60 pointer-events-none z-0">
-        <div className="hair-strand animate-hair-flow" style={{ right: '15%', animationDelay: '1s' }}></div>
-        <div className="hair-strand animate-hair-flow" style={{ right: '30%', animationDelay: '1.5s' }}></div>
+        <div className="hair-strand animate-hair-flow" style={{ right: '15%', animationDelay: '1s', opacity: '0.4' }}></div>
+        <div className="hair-strand animate-hair-flow" style={{ right: '30%', animationDelay: '1.5s', opacity: '0.3' }}></div>
       </div>
     </div>
   );
