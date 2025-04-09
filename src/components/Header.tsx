@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Crown, Sparkles } from 'lucide-react';
 
@@ -17,16 +16,9 @@ const Header = () => {
         <div className="relative mb-8 max-w-md mx-auto">
           <img 
             src="/lovable-uploads/e85d19b0-e984-45ac-9fea-41ffefd2fd8a.png" 
-            alt="Rapunzel e Flynn - Venha comemorar comigo!" 
+            alt="Rapunzel e Flynn" 
             className="w-full rounded-2xl shadow-md border-2 border-royal-gold/30"
           />
-          
-          {/* Celebratory message overlay at the top */}
-          <div className="absolute top-0 left-0 w-full p-2 text-center">
-            <p className="font-dancing text-2xl md:text-3xl text-white font-semibold tracking-wider drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
-              Venha comemorar comigo!
-            </p>
-          </div>
         </div>
         
         {/* Elegant decorative element above the crown */}
