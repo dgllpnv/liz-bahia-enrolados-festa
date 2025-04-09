@@ -46,17 +46,17 @@ const Header = () => {
         
         {/* Birthday tagline with delicate lantern-inspired age highlight */}
         <div className="relative">
-          <p className="font-cormorant text-2xl mb-6 text-royal-burgundy font-medium">
+          <p className="font-cormorant text-2xl mb-6 text-royal-purple font-medium">
             Aniversário de <span className="relative inline-flex items-center justify-center">
-              <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#FFF8E1]/20 to-[#FFD700]/10 opacity-40 blur-sm inner-light-glow"></span>
-              <span className="relative text-2xl font-cormorant font-semibold text-royal-gold px-2 py-0.5 rounded-full bg-white/80 border border-[#FFD700]/30 inner-light-pulse">3</span>
+              <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-royal-gold/20 to-royal-lilac/20 opacity-40 blur-sm inner-light-glow"></span>
+              <span className="relative text-2xl font-cormorant font-semibold text-royal-gold px-2 py-0.5 rounded-full bg-white/90 border border-royal-gold/30 inner-light-pulse">3</span>
             </span> anos
           </p>
         </div>
         
         {/* Elegant invitation text with improved contrast */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-royal-gold/30">
-          <p className="font-cormorant text-lg text-royal-burgundy mb-4 leading-relaxed italic font-medium">
+        <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-royal-gold/30">
+          <p className="font-cormorant text-lg text-royal-purple mb-4 leading-relaxed italic font-medium">
             Sua presença iluminará o reino da nossa princesa Liz em uma celebração encantada inspirada no mundo mágico de Enrolados.
           </p>
           
@@ -64,7 +64,7 @@ const Header = () => {
           <div className="flex flex-wrap justify-center gap-5 mt-6">
             <button 
               onClick={() => scrollToSection('details')}
-              className="py-2 px-6 bg-royal-gold/70 text-white rounded-lg font-cormorant text-sm tracking-wide hover:bg-royal-gold/60 transition-all shadow-sm inner-light-button font-medium"
+              className="py-2 px-6 bg-royal-gold/80 text-white rounded-lg font-cormorant text-sm tracking-wide hover:bg-royal-gold/70 transition-all shadow-sm inner-light-button font-medium"
             >
               Detalhes do Evento
             </button>

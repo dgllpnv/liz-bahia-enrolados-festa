@@ -71,12 +71,18 @@ export default {
 					blue: '#D3E4FD',
 					gold: '#FFD700',
 				},
-				// Royal theme colors
+				// Royal theme colors - enhanced with lilac, purple, pink, and gold
 				royal: {
 					gold: '#D4AF37',
 					cream: '#FFF8E1',
 					beige: '#F5F5DC',
 					burgundy: '#800020',
+					purple: '#5D3A7D',      // Deep royal purple
+					lilac: '#C8A4D4',       // Soft lilac
+					lavender: '#A889D5',    // Medium lavender
+					pink: '#E68FAC',        // Elegant pink
+					'pink-light': '#F8D7E3', // Light pink
+					'gold-light': '#F9E8B8', // Light gold
 				}
 			},
 			borderRadius: {
