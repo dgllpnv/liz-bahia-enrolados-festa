@@ -56,23 +56,23 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Tangled inspired night sky with floating lanterns background - cores mais intensas */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#162249] via-[#2C3E7B] to-[#4A5CB0]/90">
-        {/* Deep night sky effect - darker at top */}
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#0B1025]/80 to-transparent"></div>
+      {/* Tangled inspired night sky with floating lanterns background - lighter colors */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#1F2D5A] via-[#3A4D8A] to-[#6A78C2]/70">
+        {/* Light veil effect - softer gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent mix-blend-overlay"></div>
         
-        {/* Tangled floating lanterns in the background - com brilho mais intenso */}
+        {/* Tangled floating lanterns in the background - reduced quantity and opacity */}
         <div className="absolute inset-0">
-          {Array.from({ length: isMobile ? 15 : 30 }).map((_, index) => (
+          {Array.from({ length: isMobile ? 10 : 20 }).map((_, index) => (
             <div 
               key={`float-lantern-${index}`}
               className="absolute tangled-lantern"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${index * 0.5}s`,
-                opacity: 0.8 + (Math.random() * 0.2), // Increased opacity for stronger colors
-                transform: `scale(${isMobile ? 0.3 + (Math.random() * 0.5) : 0.4 + (Math.random() * 0.8)})`,
+                animationDelay: `${index * 0.6}s`,
+                opacity: 0.4 + (Math.random() * 0.3), // Lighter opacity
+                transform: `scale(${isMobile ? 0.3 + (Math.random() * 0.3) : 0.4 + (Math.random() * 0.6)})`,
               }}
             >
               <div className="tangled-lantern-light"></div>
@@ -82,20 +82,20 @@ const Index = () => {
           ))}
         </div>
         
-        {/* Small Royal Embelishments - mais brilhantes */}
-        {Array.from({ length: isMobile ? 3 : 5 }).map((_, index) => (
+        {/* Small Royal Embelishments - more subtle */}
+        {Array.from({ length: isMobile ? 2 : 3 }).map((_, index) => (
           <div 
             key={`crown-${index}`}
-            className="absolute text-royal-gold/15 animate-soft-float"
+            className="absolute text-royal-gold/10 animate-soft-float"
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
               animation: `soft-float ${8 + Math.random() * 4}s ease-in-out infinite`,
               animationDelay: `${index * 2.5}s`,
-              transform: `rotate(${Math.random() * 5}deg) scale(${0.8 + Math.random() * 0.4})`,
+              transform: `rotate(${Math.random() * 5}deg) scale(${0.7 + Math.random() * 0.3})`,
             }}
           >
-            <Crown size={index % 2 === 0 ? 18 : 15} />
+            <Crown size={index % 2 === 0 ? 16 : 14} />
           </div>
         ))}
       </div>
@@ -125,8 +125,8 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Light veil effect - mais sutil para mostrar as cores fortes */}
-      <div className="fixed inset-0 pointer-events-none bg-white/3 backdrop-blur-[0.1px]"></div>
+      {/* Light veil effect - more elegant */}
+      <div className="fixed inset-0 pointer-events-none bg-white/5 backdrop-blur-[0.2px]"></div>
     </div>
   );
 };
