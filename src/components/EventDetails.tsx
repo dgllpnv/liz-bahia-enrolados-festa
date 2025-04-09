@@ -10,13 +10,13 @@ const EventDetails = () => {
   return (
     <section id="details" className="section-container scroll-animation">
       <div className="flex items-center justify-center mb-10">
-        <div className="w-20 h-px bg-gradient-to-r from-transparent via-royal-gold/40 to-transparent"></div>
+        <div className="w-20 h-px bg-gradient-to-r from-transparent via-royal-gold/60 to-transparent"></div>
         <h2 className="tangled-heading mx-6 text-royal-gold drop-shadow-md">Detalhes do Evento</h2>
-        <div className="w-20 h-px bg-gradient-to-r from-transparent via-royal-gold/40 to-transparent"></div>
+        <div className="w-20 h-px bg-gradient-to-r from-transparent via-royal-gold/60 to-transparent"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div className="bg-white/80 p-8 flex flex-col items-center text-center shadow-lg border border-royal-gold/20 rounded-xl">
+        <div className="bg-white/90 p-8 flex flex-col items-center text-center shadow-lg border border-royal-gold/30 rounded-xl">
           <div className="mb-2">
             <Crown className="h-6 w-6 text-royal-gold" />
           </div>
@@ -51,7 +51,7 @@ const EventDetails = () => {
           </div>
         </div>
         
-        <div className="bg-white/80 p-8 flex flex-col items-center shadow-lg border border-royal-gold/20 rounded-xl">
+        <div className="bg-white/90 p-8 flex flex-col items-center shadow-lg border border-royal-gold/30 rounded-xl">
           <div className="mb-2">
             <Crown className="h-6 w-6 text-royal-gold" />
           </div>
@@ -94,7 +94,7 @@ const DetailItem = ({
       {value}
     </p>
     {subtext && 
-      <p className="text-sm text-white mt-2 bg-[#9D6FE8]/10 px-4 py-2 rounded-md border border-royal-gold/10 max-w-xs mx-auto">
+      <p className="text-sm text-gray-700 mt-2 bg-white px-4 py-2 rounded-md border border-[#9D6FE8]/30 max-w-xs mx-auto shadow-sm">
         {subtext}
       </p>
     }
@@ -102,9 +102,9 @@ const DetailItem = ({
 );
 
 const QRCodeCard = ({ title, url }: { title: string; url: string }) => (
-  <div className="flex flex-col items-center p-5 bg-gradient-to-b from-white to-[#9D6FE8]/10 border border-royal-gold/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+  <div className="flex flex-col items-center p-5 bg-gradient-to-b from-white to-white border border-[#9D6FE8]/30 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
     <h4 className="font-cinzel text-lg font-semibold text-[#7E69AB] mb-4 tracking-wide">{title}</h4>
-    <div className="bg-white p-3 rounded-md mb-4 shadow-sm border border-royal-gold/10">
+    <div className="bg-white p-3 rounded-md mb-4 shadow-sm border border-[#9D6FE8]/20">
       <QRCodeSVG 
         value={url} 
         size={140}
@@ -117,7 +117,7 @@ const QRCodeCard = ({ title, url }: { title: string; url: string }) => (
       href={url} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="text-sm text-white font-medium bg-gradient-to-r from-[#9D6FE8]/90 to-[#9D6FE8] px-5 py-1.5 rounded-full hover:shadow-md transition-all duration-300"
+      className="text-sm text-white font-medium bg-gradient-to-r from-[#9D6FE8] to-[#7E69AB] px-5 py-1.5 rounded-full hover:shadow-md transition-all duration-300"
     >
       Abrir no Maps
     </a>

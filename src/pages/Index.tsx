@@ -56,14 +56,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Tangled inspired night sky with floating lanterns background - lighter colors */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#1F2D5A] via-[#3A4D8A] to-[#6A78C2]/70">
+      {/* Lighter background for better visibility */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#4A67B3]/60 via-[#7B92D0]/50 to-[#A9B4E2]/40">
         {/* Light veil effect - softer gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-white/20 mix-blend-overlay"></div>
         
         {/* Tangled floating lanterns in the background - reduced quantity and opacity */}
         <div className="absolute inset-0">
-          {Array.from({ length: isMobile ? 10 : 20 }).map((_, index) => (
+          {Array.from({ length: isMobile ? 7 : 15 }).map((_, index) => (
             <div 
               key={`float-lantern-${index}`}
               className="absolute tangled-lantern"
@@ -71,7 +71,7 @@ const Index = () => {
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${index * 0.6}s`,
-                opacity: 0.4 + (Math.random() * 0.3), // Lighter opacity
+                opacity: 0.5 + (Math.random() * 0.3), // Lighter opacity
                 transform: `scale(${isMobile ? 0.3 + (Math.random() * 0.3) : 0.4 + (Math.random() * 0.6)})`,
               }}
             >
@@ -86,7 +86,7 @@ const Index = () => {
         {Array.from({ length: isMobile ? 2 : 3 }).map((_, index) => (
           <div 
             key={`crown-${index}`}
-            className="absolute text-royal-gold/20 animate-soft-float"
+            className="absolute text-royal-gold/30 animate-soft-float"
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
@@ -125,8 +125,8 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Light veil effect - more elegant */}
-      <div className="fixed inset-0 pointer-events-none bg-white/5 backdrop-blur-[0.2px]"></div>
+      {/* Light veil effect - more transparent */}
+      <div className="fixed inset-0 pointer-events-none bg-white/10 backdrop-blur-[0.1px]"></div>
     </div>
   );
 };
