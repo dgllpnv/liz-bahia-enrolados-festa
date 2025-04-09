@@ -53,45 +53,45 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* More subtle background with fewer elements */}
+      {/* Even more subtle background with minimal elements */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#F9F8FF] to-[#F5F0FD]">
-        {/* Subtle light effect at the top */}
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/30 to-transparent"></div>
+        {/* Very subtle light effect at the top */}
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/20 to-transparent"></div>
         
-        {/* Fewer floating lanterns with reduced opacity */}
-        {Array.from({ length: 8 }).map((_, index) => (
+        {/* Minimal floating lanterns with even more reduced opacity */}
+        {Array.from({ length: 5 }).map((_, index) => (
           <div 
             key={index}
             className="absolute royal-lantern"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              width: `${10 + Math.random() * 8}px`,
-              height: `${15 + Math.random() * 12}px`,
+              width: `${8 + Math.random() * 6}px`,
+              height: `${12 + Math.random() * 10}px`,
               animation: `lantern-royal-float ${25 + Math.random() * 5}s ease-in-out infinite`,
-              animationDelay: `${index * 2.5}s`,
-              opacity: 0.5
+              animationDelay: `${index * 3}s`,
+              opacity: 0.3
             }}
           >
             <div className="lantern-glow"></div>
           </div>
         ))}
         
-        {/* Fewer lantern icons with reduced opacity */}
-        {Array.from({ length: 5 }).map((_, index) => (
+        {/* Fewer lantern icons with even more reduced opacity */}
+        {Array.from({ length: 3 }).map((_, index) => (
           <div 
             key={`lamp-${index}`}
-            className="absolute text-rapunzel-gold/25 animate-soft-float"
+            className="absolute text-rapunzel-gold/15 animate-soft-float"
             style={{
-              top: `${15 + Math.random() * 70}%`,
+              top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
               animation: `soft-float ${8 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${index * 2}s`,
-              transform: `rotate(${Math.random() * 8}deg)`,
-              filter: 'drop-shadow(0 0 2px rgba(255, 215, 0, 0.2))'
+              animationDelay: `${index * 2.5}s`,
+              transform: `rotate(${Math.random() * 5}deg)`,
+              filter: 'drop-shadow(0 0 1px rgba(255, 215, 0, 0.1))'
             }}
           >
-            <Lamp size={index % 2 === 0 ? 22 : 18} />
+            <Lamp size={index % 2 === 0 ? 18 : 15} />
           </div>
         ))}
       </div>
@@ -121,8 +121,8 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Very subtle veil effect */}
-      <div className="fixed inset-0 pointer-events-none bg-white/3 backdrop-blur-[0.3px]"></div>
+      {/* Even more subtle veil effect */}
+      <div className="fixed inset-0 pointer-events-none bg-white/2 backdrop-blur-[0.2px]"></div>
     </div>
   );
 };
