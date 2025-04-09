@@ -21,14 +21,12 @@ const Footer = () => {
         </div>
         
         {/* Decorative lantern display for footer - more elegant arrangement */}
-        <div className="relative h-16 mb-8 overflow-hidden">
+        <div className="flex justify-center items-center gap-4 mb-8">
           {[1, 2, 3, 4, 5].map((i) => (
             <div 
-              key={`footer-lantern-${i}`} 
-              className="tangled-lantern-mini absolute"
+              key={`footer-lantern-${i}`}
+              className="tangled-lantern-mini"
               style={{
-                left: `${10 + (i * 20)}%`,
-                top: '0',
                 animationDelay: `${i * 0.4}s`
               }}
             ></div>

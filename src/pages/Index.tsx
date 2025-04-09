@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import CountdownTimer from '../components/CountdownTimer';
@@ -58,25 +59,25 @@ const Index = () => {
         <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#101731]/70 to-transparent"></div>
         
         {/* Tangled floating lanterns in the background */}
-        {Array.from({ length: 30 }).map((_, index) => (
-          <div 
-            key={`float-lantern-${index}`}
-            className="absolute tangled-lantern"
-            style={{
-              top: `${(Math.random() * 100)}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `tangled-lantern-float ${15 + Math.random() * 10}s ease-in-out infinite`,
-              animationDelay: `${index * 0.5}s`,
-              opacity: 0.7 + (Math.random() * 0.3),
-              transform: `scale(${0.4 + (Math.random() * 0.8)})`,
-              zIndex: Math.floor(Math.random() * 3)
-            }}
-          >
-            <div className="tangled-lantern-light"></div>
-            <div className="tangled-lantern-body"></div>
-            <div className="tangled-lantern-glow"></div>
-          </div>
-        ))}
+        <div className="absolute inset-0">
+          {Array.from({ length: 30 }).map((_, index) => (
+            <div 
+              key={`float-lantern-${index}`}
+              className="absolute tangled-lantern"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${index * 0.5}s`,
+                opacity: 0.7 + (Math.random() * 0.3),
+                transform: `scale(${0.4 + (Math.random() * 0.8)})`,
+              }}
+            >
+              <div className="tangled-lantern-light"></div>
+              <div className="tangled-lantern-body"></div>
+              <div className="tangled-lantern-glow"></div>
+            </div>
+          ))}
+        </div>
         
         {/* Small Royal Embelishments */}
         {Array.from({ length: 5 }).map((_, index) => (
