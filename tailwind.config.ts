@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,6 +70,13 @@ export default {
 					pink: '#FFDEE2',
 					blue: '#D3E4FD',
 					gold: '#FFD700',
+				},
+				// Royal theme colors
+				royal: {
+					gold: '#D4AF37',
+					cream: '#FFF8E1',
+					beige: '#F5F5DC',
+					burgundy: '#800020',
 				}
 			},
 			borderRadius: {
@@ -154,6 +160,23 @@ export default {
 					'100%': {
 						transform: 'translateY(0) translateX(0)'
 					}
+				},
+				'flourish-float': {
+					'0%': {
+						transform: 'translateY(0) translateX(0) rotate(0deg)'
+					},
+					'25%': {
+						transform: 'translateY(-10px) translateX(5px) rotate(2deg)'
+					},
+					'50%': {
+						transform: 'translateY(-20px) translateX(0) rotate(0deg)'
+					},
+					'75%': {
+						transform: 'translateY(-10px) translateX(-5px) rotate(-2deg)'
+					},
+					'100%': {
+						transform: 'translateY(0) translateX(0) rotate(0deg)'
+					}
 				}
 			},
 			animation: {
@@ -164,7 +187,8 @@ export default {
 				'float-horizontal': 'float-horizontal 8s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
 				'hair-flow': 'hair-flow 10s ease-in-out infinite',
-				'lantern-float': 'lantern-float 15s ease-in-out infinite'
+				'lantern-float': 'lantern-float 15s ease-in-out infinite',
+				'flourish-float': 'flourish-float 18s ease-in-out infinite'
 			},
 			fontFamily: {
 				tangled: ['Tangled', 'serif'],

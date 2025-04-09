@@ -6,7 +6,7 @@ import EventDetails from '../components/EventDetails';
 import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { Lamp } from 'lucide-react';
+import { Crown } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -53,35 +53,35 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Even more subtle background with minimal elements */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#F9F8FF] to-[#F5F0FD]">
+      {/* Subtle background with royal elements */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-b from-[#FFF8E1]/40 to-[#F5F0FD]/40">
         {/* Very subtle light effect at the top */}
         <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/20 to-transparent"></div>
         
-        {/* Minimal floating lanterns with even more reduced opacity */}
-        {Array.from({ length: 5 }).map((_, index) => (
+        {/* Minimal royal flourishes with reduced opacity */}
+        {Array.from({ length: 3 }).map((_, index) => (
           <div 
             key={index}
-            className="absolute royal-lantern"
+            className="absolute royal-flourish"
             style={{
-              top: `${Math.random() * 100}%`,
+              top: `${10 + Math.random() * 80}%`,
               left: `${Math.random() * 100}%`,
-              width: `${8 + Math.random() * 6}px`,
-              height: `${12 + Math.random() * 10}px`,
-              animation: `lantern-royal-float ${25 + Math.random() * 5}s ease-in-out infinite`,
+              width: `${10 + Math.random() * 6}px`,
+              height: `${15 + Math.random() * 10}px`,
+              animation: `flourish-float ${20 + Math.random() * 5}s ease-in-out infinite`,
               animationDelay: `${index * 3}s`,
-              opacity: 0.3
+              opacity: 0.2
             }}
           >
-            <div className="lantern-glow"></div>
+            <div className="flourish-glow"></div>
           </div>
         ))}
         
-        {/* Fewer lantern icons with even more reduced opacity */}
-        {Array.from({ length: 3 }).map((_, index) => (
+        {/* Subtle crown icons with reduced opacity */}
+        {Array.from({ length: 2 }).map((_, index) => (
           <div 
-            key={`lamp-${index}`}
-            className="absolute text-rapunzel-gold/15 animate-soft-float"
+            key={`crown-${index}`}
+            className="absolute text-royal-gold/10 animate-soft-float"
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
@@ -91,7 +91,7 @@ const Index = () => {
               filter: 'drop-shadow(0 0 1px rgba(255, 215, 0, 0.1))'
             }}
           >
-            <Lamp size={index % 2 === 0 ? 18 : 15} />
+            <Crown size={index % 2 === 0 ? 18 : 15} />
           </div>
         ))}
       </div>
@@ -121,7 +121,7 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Even more subtle veil effect */}
+      {/* Subtle veil effect */}
       <div className="fixed inset-0 pointer-events-none bg-white/2 backdrop-blur-[0.2px]"></div>
     </div>
   );
