@@ -59,8 +59,8 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="section-container scroll-animation">
-      <h2 className="tangled-heading mb-14 text-[#5D4A8A] font-bold text-3xl md:text-4xl relative" 
-          style={{ textShadow: '0 2px 6px rgba(29, 25, 43, 0.3)' }}>
+      <h2 className="tangled-heading mb-14 text-royal-gold font-bold text-3xl md:text-4xl relative" 
+          style={{ textShadow: '0 0 12px rgba(247, 197, 48, 0.5)' }}>
         Nossa Princesa
         {/* Decorações florais mais delicadas no título */}
         <span className="absolute -top-5 -left-4 text-2xl text-rapunzel-pink text-opacity-40">❀</span>
@@ -159,3 +159,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
