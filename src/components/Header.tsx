@@ -46,7 +46,7 @@ const Header = () => {
         
         {/* Birthday tagline with delicate lantern-inspired age highlight */}
         <div className="relative">
-          <p className="font-cormorant text-2xl mb-6 text-rapunzel-purple-dark/80 italic">
+          <p className="font-cormorant text-2xl mb-6 text-royal-burgundy/90 italic">
             Aniversário de <span className="relative inline-flex items-center justify-center">
               <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#FFF8E1]/20 to-[#FFD700]/10 opacity-40 blur-sm inner-light-glow"></span>
               <span className="relative text-2xl font-cormorant font-medium text-royal-gold px-2 py-0.5 rounded-full bg-white/50 border border-[#FFD700]/20 inner-light-pulse">3</span>
@@ -55,8 +55,8 @@ const Header = () => {
         </div>
         
         {/* Elegant invitation text with lantern and inner light reference */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-royal-gold/10">
-          <p className="font-cormorant text-lg text-rapunzel-purple-dark/80 mb-4 leading-relaxed italic">
+        <div className="bg-white/60 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-royal-gold/20">
+          <p className="font-cormorant text-lg text-royal-burgundy/80 mb-4 leading-relaxed italic">
             Sua presença iluminará o reino da nossa princesa Liz em uma celebração encantada inspirada no mundo mágico de Enrolados.
           </p>
           
