@@ -13,12 +13,13 @@ const Header = () => {
   return (
     <header className="py-14 px-6 text-center relative z-10">
       <div className="max-w-5xl mx-auto">
-        {/* Rapunzel and Flynn image with flowing hair */}
+        {/* Rapunzel and Flynn image with flowing hair - improved quality */}
         <div className="relative mb-8 max-w-md mx-auto">
           <img 
             src="/lovable-uploads/4979c8dc-4fb8-4801-9448-4422d06ca117.png" 
             alt="Rapunzel e Flynn" 
-            className="w-full rounded-2xl shadow-md border-2 border-royal-gold/30"
+            className="w-full rounded-2xl shadow-md border-2 border-royal-gold/30 object-cover object-center"
+            style={{ imageRendering: 'high-quality' }}
           />
         </div>
         
@@ -40,9 +41,9 @@ const Header = () => {
           Liz Bahia
         </h1>
         
-        {/* Birthday tagline with refined pink highlight and sparkle decorations */}
+        {/* Birthday tagline with baby pink text and sparkle decorations */}
         <div className="relative mb-6 group">
-          <p className="font-cormorant text-2xl md:text-3xl text-white font-semibold tracking-wide">
+          <p className="font-cormorant text-2xl md:text-3xl text-[#FFDEE2] font-semibold tracking-wide">
             <span className="relative inline-flex items-center justify-center mr-2">
               Aniversário de
             </span>
@@ -55,7 +56,7 @@ const Header = () => {
                 </span>
               </span>
             </span>
-            <span className="relative inline-flex items-center justify-center ml-2">
+            <span className="relative inline-flex items-center justify-center ml-2 text-[#FFDEE2]">
               anos
             </span>
           </p>
