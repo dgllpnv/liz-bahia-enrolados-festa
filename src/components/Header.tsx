@@ -16,7 +16,7 @@ const Header = () => {
         {/* Rapunzel and Flynn image with flowing hair */}
         <div className="relative mb-8 max-w-md mx-auto">
           <img 
-            src="/lovable-uploads/e85d19b0-e984-45ac-9fea-41ffefd2fd8a.png" 
+            src="/lovable-uploads/4979c8dc-4fb8-4801-9448-4422d06ca117.png" 
             alt="Rapunzel e Flynn" 
             className="w-full rounded-2xl shadow-md border-2 border-royal-gold/30"
           />
