@@ -10,15 +10,15 @@ const EventDetails = () => {
   return (
     <section id="details" className="section-container scroll-animation">
       <div className="flex items-center justify-center mb-10">
-        <div className="w-20 h-px bg-gradient-to-r from-transparent via-royal-gold/60 to-transparent"></div>
-        <h2 className="tangled-heading mx-6 text-royal-gold drop-shadow-md">Detalhes do Evento</h2>
-        <div className="w-20 h-px bg-gradient-to-r from-transparent via-royal-gold/60 to-transparent"></div>
+        <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#9D6FE8]/60 to-transparent"></div>
+        <h2 className="tangled-heading mx-6 text-[#7E69AB] drop-shadow-md">Detalhes do Evento</h2>
+        <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#9D6FE8]/60 to-transparent"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div className="bg-white/90 p-8 flex flex-col items-center text-center shadow-lg border border-royal-gold/30 rounded-xl">
+        <div className="bg-white/95 p-8 flex flex-col items-center text-center shadow-lg border border-[#9D6FE8]/30 rounded-xl">
           <div className="mb-2">
-            <Crown className="h-6 w-6 text-royal-gold" />
+            <Crown className="h-6 w-6 text-[#9D6FE8]" />
           </div>
           <h3 className="font-cinzel text-2xl text-[#7E69AB] font-bold mb-8 drop-shadow-sm tracking-wide">Informações</h3>
           
@@ -32,7 +32,7 @@ const EventDetails = () => {
             <DetailItem 
               icon={<Clock className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Horário" 
-              value="18:00h" 
+              value="18:00 às 22:00h" 
             />
             
             <DetailItem 
@@ -51,9 +51,9 @@ const EventDetails = () => {
           </div>
         </div>
         
-        <div className="bg-white/90 p-8 flex flex-col items-center shadow-lg border border-royal-gold/30 rounded-xl">
+        <div className="bg-white/95 p-8 flex flex-col items-center shadow-lg border border-[#9D6FE8]/30 rounded-xl">
           <div className="mb-2">
-            <Crown className="h-6 w-6 text-royal-gold" />
+            <Crown className="h-6 w-6 text-[#9D6FE8]" />
           </div>
           <h3 className="font-cinzel text-2xl text-[#7E69AB] font-bold mb-8 drop-shadow-sm tracking-wide">QR Codes</h3>
           
