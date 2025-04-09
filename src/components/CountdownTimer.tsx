@@ -43,7 +43,7 @@ const CountdownTimer = () => {
 
   return (
     <div className="mb-16 mt-8">
-      <h3 className="font-cinzel text-4xl md:text-5xl text-center mb-10 text-[#6E59A5] font-bold" style={{ textShadow: '0 0 12px rgba(110, 89, 165, 0.5)' }}>
+      <h3 className="font-cinzel text-4xl md:text-5xl text-center mb-10 text-royal-gold font-bold" style={{ textShadow: '0 0 12px rgba(247, 197, 48, 0.5)' }}>
         Contagem Regressiva
       </h3>
       
