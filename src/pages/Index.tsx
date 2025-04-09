@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import CountdownTimer from '../components/CountdownTimer';
@@ -6,6 +5,7 @@ import EventDetails from '../components/EventDetails';
 import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import ScrollAnimation from '../components/ScrollAnimation';
+import { Lamp } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -37,41 +37,41 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Background mais delicado - com mais luz e transparência */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        {/* Efeito de luz suave no topo */}
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/40 to-transparent"></div>
+      {/* Royal background with lantern motif */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#F8F6FF]">
+        {/* Subtle light effect at the top */}
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/30 to-transparent"></div>
         
-        {/* Lanternas delicadas */}
-        {Array.from({ length: 12 }).map((_, index) => (
+        {/* Floating lanterns that stand out more */}
+        {Array.from({ length: 15 }).map((_, index) => (
           <div 
             key={index}
-            className="absolute w-3 h-5 bg-rapunzel-gold opacity-15 rounded-full"
+            className="absolute royal-lantern"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              boxShadow: '0 0 8px rgba(255, 215, 0, 0.2)',
-              animation: `lantern-float ${15 + Math.random() * 10}s linear infinite`,
-              animationDelay: `${index * 1.5}s`
+              width: `${10 + Math.random() * 8}px`,
+              height: `${15 + Math.random() * 12}px`,
+              animationDelay: `${index * 1.8}s`
             }}
-          ></div>
+          >
+            <div className="lantern-glow"></div>
+          </div>
         ))}
         
-        {/* Pequenas flores decorativas flutuantes mais suaves */}
+        {/* Lantern icons spread through the page */}
         {Array.from({ length: 8 }).map((_, index) => (
           <div 
-            key={`flower-${index}`}
-            className="absolute text-lg text-opacity-10 animate-soft-float"
+            key={`lamp-${index}`}
+            className="absolute text-rapunzel-gold/30 animate-soft-float"
             style={{
               top: `${10 + Math.random() * 80}%`,
               left: `${Math.random() * 100}%`,
               animationDelay: `${index * 1.4}s`,
-              transform: `rotate(${Math.random() * 45}deg)`,
-              color: index % 2 === 0 ? '#FFDEE2' : '#FFD700',
-              opacity: '0.1'
+              transform: `rotate(${Math.random() * 10}deg)`,
             }}
           >
-            {index % 3 === 0 ? '❀' : '✿'}
+            <Lamp size={index % 2 === 0 ? 24 : 18} />
           </div>
         ))}
       </div>
@@ -101,18 +101,7 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Decorative hair strands mais delicados e etéreos */}
-      <div className="fixed bottom-0 left-0 w-1/4 h-60 pointer-events-none z-0">
-        <div className="hair-strand animate-hair-flow" style={{ left: '15%', animationDelay: '0s', opacity: '0.3' }}></div>
-        <div className="hair-strand animate-hair-flow" style={{ left: '30%', animationDelay: '0.8s', opacity: '0.2' }}></div>
-      </div>
-      
-      <div className="fixed bottom-0 right-0 w-1/4 h-60 pointer-events-none z-0">
-        <div className="hair-strand animate-hair-flow" style={{ right: '20%', animationDelay: '1.2s', opacity: '0.3' }}></div>
-        <div className="hair-strand animate-hair-flow" style={{ right: '35%', animationDelay: '2s', opacity: '0.2' }}></div>
-      </div>
-      
-      {/* Efeito de véu delicado */}
+      {/* Royal veil effect */}
       <div className="fixed inset-0 pointer-events-none bg-white/5 backdrop-blur-[1px]"></div>
     </div>
   );
