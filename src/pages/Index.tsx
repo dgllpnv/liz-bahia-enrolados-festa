@@ -37,35 +37,41 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Background mais delicado - lanternas flutuantes mais sutis */}
+      {/* Background mais delicado - com mais luz e transparência */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        {Array.from({ length: 10 }).map((_, index) => (
+        {/* Efeito de luz suave no topo */}
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/40 to-transparent"></div>
+        
+        {/* Lanternas delicadas */}
+        {Array.from({ length: 12 }).map((_, index) => (
           <div 
             key={index}
-            className="absolute w-4 h-6 bg-rapunzel-gold opacity-20 rounded-full"
+            className="absolute w-3 h-5 bg-rapunzel-gold opacity-15 rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              boxShadow: '0 0 10px rgba(255, 215, 0, 0.3)',
-              animation: `lantern-float ${15 + Math.random() * 8}s linear infinite`,
-              animationDelay: `${index * 2}s`
+              boxShadow: '0 0 8px rgba(255, 215, 0, 0.2)',
+              animation: `lantern-float ${15 + Math.random() * 10}s linear infinite`,
+              animationDelay: `${index * 1.5}s`
             }}
           ></div>
         ))}
         
-        {/* Pequenas flores decorativas flutuantes */}
-        {Array.from({ length: 6 }).map((_, index) => (
+        {/* Pequenas flores decorativas flutuantes mais suaves */}
+        {Array.from({ length: 8 }).map((_, index) => (
           <div 
             key={`flower-${index}`}
-            className="absolute text-xl text-rapunzel-pink text-opacity-15 animate-soft-float"
+            className="absolute text-lg text-opacity-10 animate-soft-float"
             style={{
               top: `${10 + Math.random() * 80}%`,
               left: `${Math.random() * 100}%`,
-              animationDelay: `${index * 1.2}s`,
-              transform: `rotate(${Math.random() * 45}deg)`
+              animationDelay: `${index * 1.4}s`,
+              transform: `rotate(${Math.random() * 45}deg)`,
+              color: index % 2 === 0 ? '#FFDEE2' : '#FFD700',
+              opacity: '0.1'
             }}
           >
-            ❀
+            {index % 3 === 0 ? '❀' : '✿'}
           </div>
         ))}
       </div>
@@ -95,16 +101,19 @@ const Index = () => {
         <Footer />
       </ScrollAnimation>
       
-      {/* Decorative hair strands mais delicados */}
-      <div className="fixed bottom-0 left-0 w-1/3 h-60 pointer-events-none z-0">
-        <div className="hair-strand animate-hair-flow" style={{ left: '10%', animationDelay: '0s', opacity: '0.4' }}></div>
-        <div className="hair-strand animate-hair-flow" style={{ left: '25%', animationDelay: '0.5s', opacity: '0.3' }}></div>
+      {/* Decorative hair strands mais delicados e etéreos */}
+      <div className="fixed bottom-0 left-0 w-1/4 h-60 pointer-events-none z-0">
+        <div className="hair-strand animate-hair-flow" style={{ left: '15%', animationDelay: '0s', opacity: '0.3' }}></div>
+        <div className="hair-strand animate-hair-flow" style={{ left: '30%', animationDelay: '0.8s', opacity: '0.2' }}></div>
       </div>
       
-      <div className="fixed bottom-0 right-0 w-1/3 h-60 pointer-events-none z-0">
-        <div className="hair-strand animate-hair-flow" style={{ right: '15%', animationDelay: '1s', opacity: '0.4' }}></div>
-        <div className="hair-strand animate-hair-flow" style={{ right: '30%', animationDelay: '1.5s', opacity: '0.3' }}></div>
+      <div className="fixed bottom-0 right-0 w-1/4 h-60 pointer-events-none z-0">
+        <div className="hair-strand animate-hair-flow" style={{ right: '20%', animationDelay: '1.2s', opacity: '0.3' }}></div>
+        <div className="hair-strand animate-hair-flow" style={{ right: '35%', animationDelay: '2s', opacity: '0.2' }}></div>
       </div>
+      
+      {/* Efeito de véu delicado */}
+      <div className="fixed inset-0 pointer-events-none bg-white/5 backdrop-blur-[1px]"></div>
     </div>
   );
 };
