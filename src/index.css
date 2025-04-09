@@ -130,6 +130,12 @@
     letter-spacing: 0.05em;
   }
   
+  .royal-number-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px -3px rgba(217, 70, 239, 0.5);
+    animation: number-pulse 3s ease-in-out infinite;
+  }
+  
   .royal-lantern {
     @apply absolute bg-rapunzel-gold bg-opacity-90 rounded-t-full;
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
@@ -323,5 +329,16 @@
   50% { 
     opacity: 1;
     transform: scale(1.6);
+  }
+}
+
+@keyframes number-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 4px 15px -3px rgba(217, 70, 239, 0.5);
+  }
+  50% { 
+    transform: scale(1.08);
+    box-shadow: 0 4px 20px -2px rgba(217, 70, 239, 0.7);
   }
 }
