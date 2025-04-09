@@ -4,8 +4,8 @@ import { MapPin, Calendar, Clock, Car, Crown } from 'lucide-react';
 import QRCodeSVG from "react-qr-code";
 
 const EventDetails = () => {
-  const partyLocation = "https://maps.app.goo.gl/BXHXWoxH3UNyeaZe9"; // Google Maps link for Casa de Festa Mundo Caramelo
-  const parkingLocation = "https://maps.app.goo.gl/pRYz2YLvV51DGVQW6"; // Google Maps link for Mais Empresarial
+  const partyLocation = "#"; // Placeholder link
+  const parkingLocation = "#"; // Placeholder link
 
   return (
     <section id="details" className="section-container scroll-animation">
@@ -26,27 +26,27 @@ const EventDetails = () => {
             <DetailItem 
               icon={<Calendar className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Data" 
-              value="26 de Abril de 2025" 
+              value="Em breve" 
             />
             
             <DetailItem 
               icon={<Clock className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Horário" 
-              value="18:00 às 22:00h" 
+              value="A confirmar" 
             />
             
             <DetailItem 
               icon={<MapPin className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Local" 
-              value="Casa de Festa Mundo Caramelo" 
-              subtext="R. João Chagas Ortins de Freitas, 5 - Buraquinho, Lauro de Freitas - BA, 42710-610" 
+              value="A confirmar" 
+              subtext="Detalhes serão enviados em breve" 
             />
             
             <DetailItem 
               icon={<Car className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Estacionamento" 
-              value="Mais Empresarial"
-              subtext="610, R. João Chagas Ortins de Freitas - Buraquinho, Lauro de Freitas - BA, 42700-000" 
+              value="A confirmar"
+              subtext="Informações serão fornecidas posteriormente" 
             />
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Crown, Sparkles } from 'lucide-react';
 
@@ -57,16 +58,6 @@ const Header = () => {
             <span className="relative inline-flex items-center justify-center ml-2">
               anos
             </span>
-          </p>
-        </div>
-        
-        {/* Date and time information */}
-        <div className="my-6 text-center">
-          <p className="font-dancing text-2xl text-white font-bold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
-            26 de abril
-          </p>
-          <p className="font-dancing text-2xl text-white font-bold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
-            18:00 às 22:00h
           </p>
         </div>
         
