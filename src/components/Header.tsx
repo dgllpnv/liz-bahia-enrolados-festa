@@ -60,10 +60,6 @@ const Header = () => {
             Sua presença iluminará o reino da nossa princesa Liz em uma celebração encantada inspirada no mundo mágico de Enrolados.
           </p>
           
-          <p className="font-cormorant text-md text-rapunzel-purple-dark/70 mb-6 leading-relaxed italic">
-            "Assim como as lanternas que iluminam o céu noturno em Enrolados, cada um de nós carrega uma luz interior que brilha de forma única."
-          </p>
-          
           {/* Royal navigation link */}
           <div className="flex flex-wrap justify-center gap-5 mt-6">
             <button 
