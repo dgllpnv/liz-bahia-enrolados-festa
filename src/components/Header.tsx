@@ -61,30 +61,30 @@ const Header = () => {
       
       {/* Content */}
       <div className={`relative z-20 text-center transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        <h2 className="font-dancing text-3xl md:text-4xl text-rapunzel-gold mb-4 animate-float-slow">
+        <h2 className="font-dancing text-3xl md:text-4xl text-rapunzel-gold mb-4 animate-float-slow font-bold drop-shadow-lg">
           Você está convidado para o aniversário de
         </h2>
         
-        <h1 className="tangled-heading mb-6 text-rapunzel-purple-dark">
+        <h1 className="tangled-heading mb-6 text-[#6E59A5] font-extrabold text-shadow-lg">
           Liz Bahia
           <span className="absolute -top-6 -right-6 text-rapunzel-gold">
             <Sparkles size={40} className="animate-pulse-glow" />
           </span>
         </h1>
         
-        <div className="text-2xl md:text-3xl font-cinzel text-foreground mb-8 animate-float">
+        <div className="text-2xl md:text-3xl font-cinzel text-[#1A1F2C] mb-8 animate-float font-bold drop-shadow-md">
           3 anos
         </div>
         
-        <div className="card-glass p-6 max-w-md mx-auto">
-          <p className="font-dancing text-2xl md:text-3xl text-foreground mb-4">
+        <div className="card-glass p-6 max-w-md mx-auto shadow-lg border-2 border-white/30">
+          <p className="font-dancing text-2xl md:text-3xl text-[#7E69AB] mb-4 font-bold">
             26 de Abril de 2025
           </p>
-          <p className="font-cinzel text-xl md:text-2xl text-foreground">
+          <p className="font-cinzel text-xl md:text-2xl text-[#1A1F2C] font-semibold">
             18:00h
           </p>
           <div className="mt-8">
-            <a href="#details" className="inline-block py-3 px-6 bg-rapunzel-purple-dark text-white font-cinzel rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg">
+            <a href="#details" className="inline-block py-3 px-6 bg-[#6E59A5] text-white font-cinzel rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg font-semibold">
               Ver Detalhes
             </a>
           </div>

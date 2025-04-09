@@ -42,12 +42,12 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="mb-12 mt-4">
-      <h3 className="font-cinzel text-2xl md:text-3xl text-center mb-6 text-rapunzel-purple-dark">
+    <div className="mb-16 mt-8">
+      <h3 className="font-cinzel text-3xl md:text-4xl text-center mb-8 text-[#6E59A5] font-bold drop-shadow-md">
         Contagem Regressiva
       </h3>
       
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-6">
         <TimeBox value={timeLeft.days} label="Dias" />
         <TimeBox value={timeLeft.hours} label="Horas" />
         <TimeBox value={timeLeft.minutes} label="Minutos" />
@@ -58,11 +58,11 @@ const CountdownTimer = () => {
 };
 
 const TimeBox = ({ value, label }: { value: number; label: string }) => (
-  <div className="card-glass p-4 w-20 md:w-24 flex flex-col items-center justify-center animate-float">
-    <div className="text-2xl md:text-3xl font-cinzel text-rapunzel-purple-dark">
+  <div className="card-glass p-5 w-24 md:w-32 h-32 md:h-36 flex flex-col items-center justify-center animate-float shadow-lg border-2 border-white/30">
+    <div className="text-3xl md:text-5xl font-cinzel text-[#6E59A5] font-bold drop-shadow-md">
       {value}
     </div>
-    <div className="text-xs md:text-sm font-dancing text-foreground mt-1">
+    <div className="text-sm md:text-base font-dancing text-[#1A1F2C] font-semibold mt-2">
       {label}
     </div>
   </div>
