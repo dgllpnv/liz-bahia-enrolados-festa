@@ -44,15 +44,15 @@ const Header = () => {
           Liz Bahia
         </h1>
         
-        {/* Birthday tagline with enhanced highlight for age */}
+        {/* Birthday tagline with enhanced highlight for age - now with pink colors */}
         <div className="relative mb-5">
           <p className="font-cormorant text-2xl md:text-3xl text-royal-purple font-semibold">
             <span className="relative inline-flex items-center justify-center mr-2">
               Aniversário de
             </span>
             <span className="relative inline-flex items-center justify-center">
-              <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-royal-gold/30 to-royal-pink/30 opacity-70 blur-sm inner-light-glow"></span>
-              <span className="relative text-3xl md:text-4xl font-dancing font-bold text-royal-gold px-3 py-1 rounded-full bg-white/90 border-2 border-royal-gold/50 inner-light-pulse">3</span>
+              <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-royal-pink/60 to-royal-pink-light/70 opacity-80 blur-sm inner-light-glow"></span>
+              <span className="relative text-3xl md:text-4xl font-dancing font-bold text-royal-pink px-3 py-1 rounded-full bg-white/90 border-2 border-royal-pink/60 inner-light-pulse">3</span>
             </span>
             <span className="relative inline-flex items-center justify-center ml-2">
               anos
