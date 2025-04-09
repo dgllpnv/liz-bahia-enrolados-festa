@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import CountdownTimer from '../components/CountdownTimer';
@@ -28,23 +29,7 @@ const Index = () => {
     // Add scroll event listener
     window.addEventListener('scroll', animateOnScroll);
     
-    // Preload gallery images
-    const preloadImages = () => {
-      const galleryImages = [
-        '/gallery/photo1.jpg',
-        '/gallery/photo2.jpg',
-        '/gallery/photo3.jpg',
-        '/gallery/photo4.jpg',
-        '/gallery/photo5.jpg',
-      ];
-      
-      galleryImages.forEach((src) => {
-        const img = new Image();
-        img.src = src;
-      });
-    };
-    
-    preloadImages();
+    // Preload gallery images - Removido daqui pois agora está no componente Gallery
     
     // Cleanup
     return () => {
