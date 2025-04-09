@@ -20,30 +20,30 @@ const EventDetails = () => {
           <div className="mb-2">
             <Crown className="h-6 w-6 text-royal-gold" />
           </div>
-          <h3 className="font-cinzel text-2xl text-royal-gold font-bold mb-8 drop-shadow-sm tracking-wide">Informações</h3>
+          <h3 className="font-cinzel text-2xl text-[#7E69AB] font-bold mb-8 drop-shadow-sm tracking-wide">Informações</h3>
           
           <div className="space-y-8 w-full">
             <DetailItem 
-              icon={<Calendar className="text-royal-gold drop-shadow-md" size={28} />} 
+              icon={<Calendar className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Data" 
               value="26 de Abril de 2025" 
             />
             
             <DetailItem 
-              icon={<Clock className="text-royal-gold drop-shadow-md" size={28} />} 
+              icon={<Clock className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Horário" 
               value="18:00h" 
             />
             
             <DetailItem 
-              icon={<MapPin className="text-royal-gold drop-shadow-md" size={28} />} 
+              icon={<MapPin className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Local" 
               value="Casa de Festa Mundo Caramelo" 
               subtext="R. João Chagas Ortins de Freitas, 5 - Buraquinho, Lauro de Freitas - BA, 42710-610" 
             />
             
             <DetailItem 
-              icon={<Car className="text-royal-gold drop-shadow-md" size={28} />} 
+              icon={<Car className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Estacionamento" 
               value="Mais Empresarial"
               subtext="610, R. João Chagas Ortins de Freitas - Buraquinho, Lauro de Freitas - BA, 42700-000" 
@@ -55,7 +55,7 @@ const EventDetails = () => {
           <div className="mb-2">
             <Crown className="h-6 w-6 text-royal-gold" />
           </div>
-          <h3 className="font-cinzel text-2xl text-royal-gold font-bold mb-8 drop-shadow-sm tracking-wide">QR Codes</h3>
+          <h3 className="font-cinzel text-2xl text-[#7E69AB] font-bold mb-8 drop-shadow-sm tracking-wide">QR Codes</h3>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
             <QRCodeCard 
@@ -87,7 +87,7 @@ const DetailItem = ({
 }) => (
   <div className="flex flex-col items-center group">
     <div className="mb-2 transform group-hover:scale-110 transition-transform duration-300">{icon}</div>
-    <h4 className="font-cinzel text-lg font-semibold text-royal-gold tracking-wider">
+    <h4 className="font-cinzel text-lg font-semibold text-[#7E69AB] tracking-wider">
       {label}
     </h4>
     <p className="font-dancing text-xl text-royal-pink font-bold mt-1">
@@ -103,7 +103,7 @@ const DetailItem = ({
 
 const QRCodeCard = ({ title, url }: { title: string; url: string }) => (
   <div className="flex flex-col items-center p-5 bg-gradient-to-b from-white to-royal-pink-light/10 border border-royal-gold/20 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-    <h4 className="font-cinzel text-lg font-semibold text-royal-gold mb-4 tracking-wide">{title}</h4>
+    <h4 className="font-cinzel text-lg font-semibold text-[#7E69AB] mb-4 tracking-wide">{title}</h4>
     <div className="bg-white p-3 rounded-md mb-4 shadow-sm border border-royal-gold/10">
       <QRCodeSVG 
         value={url} 
