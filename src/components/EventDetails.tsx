@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { MapPin, Calendar, Clock, Car } from 'lucide-react';
-import { QRCodeSVG } from 'react-qr-code';
+import QRCodeSVG from "react-qr-code";
 
 const EventDetails = () => {
   const partyLocation = "https://maps.app.goo.gl/BXHXWoxH3UNyeaZe9"; // Google Maps link for Casa de Festa Mundo Caramelo
