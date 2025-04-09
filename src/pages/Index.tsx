@@ -86,7 +86,7 @@ const Index = () => {
         {Array.from({ length: isMobile ? 2 : 3 }).map((_, index) => (
           <div 
             key={`crown-${index}`}
-            className="absolute text-royal-gold/10 animate-soft-float"
+            className="absolute text-royal-gold/20 animate-soft-float"
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
