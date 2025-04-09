@@ -6,7 +6,7 @@ import EventDetails from '../components/EventDetails';
 import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { Crown, Lamp } from 'lucide-react';
+import { Crown } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -59,7 +59,7 @@ const Index = () => {
         <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white/20 to-transparent"></div>
         
         {/* Floating lanterns in the background */}
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: 8 }).map((_, index) => (
           <div 
             key={`float-lantern-${index}`}
             className="absolute royal-lantern"
@@ -68,10 +68,10 @@ const Index = () => {
               left: `${Math.random() * 100}%`,
               animation: `lantern-royal-float ${20 + Math.random() * 5}s ease-in-out infinite`,
               animationDelay: `${index * 2}s`,
-              opacity: 0.4 + (Math.random() * 0.2)
+              opacity: 0.7 + (Math.random() * 0.3)
             }}
           >
-            <Lamp size={16 + Math.floor(Math.random() * 8)} className="text-royal-gold filter drop-shadow-md" />
+            <div className="floating-lantern"></div>
             <div className="lantern-royal-glow"></div>
           </div>
         ))}

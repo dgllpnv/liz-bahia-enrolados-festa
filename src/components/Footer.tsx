@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heart, Flower, Lamp, ArrowUp } from 'lucide-react';
+import { Heart, Flower, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,15 +13,15 @@ const Footer = () => {
   return (
     <footer className="py-12 text-center text-rapunzel-purple-dark scroll-animation">
       <div className="container mx-auto relative">
-        {/* Enhanced royal decorative elements with lanterns */}
+        {/* Enhanced royal decorative elements with floating lanterns */}
         <div className="mx-auto w-48 h-px bg-gradient-to-r from-transparent via-[#D4B7EE] to-transparent mb-8"></div>
         
         <div className="flex justify-center gap-8 mb-8">
-          <Lamp className="h-5 w-5 text-rapunzel-gold animate-soft-pulse inner-light filter drop-shadow-md" />
+          <div className="floating-lantern-mini"></div>
           <div className="w-px h-5 bg-[#D4B7EE]/60"></div>
           <Flower className="h-5 w-5 text-[#D4B7EE] animate-soft-pulse filter drop-shadow-sm" style={{animationDelay: '0.8s'}} />
           <div className="w-px h-5 bg-[#D4B7EE]/60"></div>
-          <Lamp className="h-5 w-5 text-rapunzel-gold animate-soft-pulse inner-light filter drop-shadow-md" style={{animationDelay: '1.5s'}} />
+          <div className="floating-lantern-mini" style={{animationDelay: '1.5s'}}></div>
         </div>
         
         <p className="font-dancing text-2xl mb-4 text-rapunzel-purple-dark/90 royal-text tracking-wide">
@@ -30,7 +30,7 @@ const Footer = () => {
         
         {/* Inner light message */}
         <p className="font-cormorant text-sm italic mb-6 text-rapunzel-purple-dark/70 max-w-md mx-auto">
-          "As lanternas que iluminam nosso caminho são reflexos da luz que brilha dentro de nós."
+          "As lanternas flutuantes que iluminam o céu são reflexos da luz que brilha dentro de cada um de nós."
         </p>
         
         <div className="flex flex-col items-center justify-center">

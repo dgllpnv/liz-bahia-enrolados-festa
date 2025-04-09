@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Crown, Lamp } from 'lucide-react';
+import { Crown } from 'lucide-react';
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -26,7 +26,7 @@ const Header = () => {
               }}
             >
               <div className="lantern-light"></div>
-              <Lamp size={20} className="text-royal-gold filter drop-shadow-md" />
+              <div className="floating-lantern"></div>
               <div className="lantern-glow"></div>
             </div>
           ))}
@@ -59,7 +59,7 @@ const Header = () => {
           </p>
           
           <p className="font-cormorant text-md text-rapunzel-purple-dark/70 mb-6 leading-relaxed italic">
-            "Assim como as lanternas que iluminam o céu, cada um de nós carrega uma luz interior que brilha de forma única."
+            "Assim como as lanternas que iluminam o céu noturno, cada um de nós carrega uma luz interior que brilha de forma única."
           </p>
           
           {/* Royal navigation link */}
@@ -77,7 +77,7 @@ const Header = () => {
         <div className="relative w-32 h-px mx-auto">
           <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-royal-gold/30 to-transparent"></div>
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-royal-gold/60">
-            <Lamp size={12} className="filter drop-shadow-sm" />
+            <div className="floating-lantern-mini"></div>
           </div>
         </div>
       </div>
