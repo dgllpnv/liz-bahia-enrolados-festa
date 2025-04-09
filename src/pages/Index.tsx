@@ -7,8 +7,11 @@ import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Crown } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Index = () => {
+  const isMobile = useIsMobile();
+  
   useEffect(() => {
     // Add scroll animation functionality
     const animateOnScroll = () => {
@@ -60,7 +63,7 @@ const Index = () => {
         
         {/* Tangled floating lanterns in the background - com brilho mais intenso */}
         <div className="absolute inset-0">
-          {Array.from({ length: 30 }).map((_, index) => (
+          {Array.from({ length: isMobile ? 15 : 30 }).map((_, index) => (
             <div 
               key={`float-lantern-${index}`}
               className="absolute tangled-lantern"
@@ -69,7 +72,7 @@ const Index = () => {
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${index * 0.5}s`,
                 opacity: 0.8 + (Math.random() * 0.2), // Increased opacity for stronger colors
-                transform: `scale(${0.4 + (Math.random() * 0.8)})`,
+                transform: `scale(${isMobile ? 0.3 + (Math.random() * 0.5) : 0.4 + (Math.random() * 0.8)})`,
               }}
             >
               <div className="tangled-lantern-light"></div>
@@ -80,7 +83,7 @@ const Index = () => {
         </div>
         
         {/* Small Royal Embelishments - mais brilhantes */}
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: isMobile ? 3 : 5 }).map((_, index) => (
           <div 
             key={`crown-${index}`}
             className="absolute text-royal-gold/15 animate-soft-float"
@@ -102,7 +105,7 @@ const Index = () => {
       
       <main className="flex-grow z-10">
         <ScrollAnimation>
-          <section className="py-12 px-4">
+          <section className="py-6 md:py-12 px-4">
             <div className="container mx-auto">
               <CountdownTimer />
             </div>
