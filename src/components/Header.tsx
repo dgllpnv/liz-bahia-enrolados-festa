@@ -44,19 +44,25 @@ const Header = () => {
           Liz Bahia
         </h1>
         
-        {/* Birthday tagline with delicate lantern-inspired age highlight */}
-        <div className="relative">
-          <p className="font-cormorant text-2xl mb-6 text-royal-purple font-medium">
-            Aniversário de <span className="relative inline-flex items-center justify-center">
-              <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-royal-gold/20 to-royal-lilac/20 opacity-40 blur-sm inner-light-glow"></span>
-              <span className="relative text-2xl font-cormorant font-semibold text-royal-gold px-2 py-0.5 rounded-full bg-white/90 border border-royal-gold/30 inner-light-pulse">3</span>
-            </span> anos
+        {/* Birthday tagline with enhanced highlight for age */}
+        <div className="relative mb-5">
+          <p className="font-cormorant text-2xl md:text-3xl text-royal-purple font-semibold">
+            <span className="relative inline-flex items-center justify-center mr-2">
+              Aniversário de
+            </span>
+            <span className="relative inline-flex items-center justify-center">
+              <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-royal-gold/30 to-royal-pink/30 opacity-70 blur-sm inner-light-glow"></span>
+              <span className="relative text-3xl md:text-4xl font-dancing font-bold text-royal-gold px-3 py-1 rounded-full bg-white/90 border-2 border-royal-gold/50 inner-light-pulse">3</span>
+            </span>
+            <span className="relative inline-flex items-center justify-center ml-2">
+              anos
+            </span>
           </p>
         </div>
         
-        {/* Elegant invitation text with improved contrast */}
+        {/* Elegant invitation text with larger font size */}
         <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-sm p-6 max-w-2xl mx-auto mb-8 border border-royal-gold/30">
-          <p className="font-cormorant text-lg text-royal-purple mb-4 leading-relaxed italic font-medium">
+          <p className="font-cormorant text-xl md:text-2xl text-royal-purple mb-4 leading-relaxed italic font-medium">
             Sua presença iluminará o reino da nossa princesa Liz em uma celebração encantada inspirada no mundo mágico de Enrolados.
           </p>
           
