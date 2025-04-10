@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="flex justify-center gap-5 md:gap-8 mb-6 md:mb-8">
           <div className="tangled-lantern-mini opacity-70"></div>
           <div className="w-px h-4 md:h-5 bg-royal-gold/30"></div>
-          <Flower className="h-3.5 w-3.5 md:h-4 md:w-4 text-royal-pink animate-soft-pulse" style={{animationDelay: '0.8s'}} />
+          <Flower className="h-3.5 w-3.5 md:h-4 md:w-4 text-[#FF6B99] animate-soft-pulse" style={{animationDelay: '0.8s'}} />
           <div className="w-px h-4 md:h-5 bg-royal-gold/30"></div>
           <div className="tangled-lantern-mini opacity-70" style={{animationDelay: '1.5s'}}></div>
         </div>
@@ -58,7 +58,7 @@ const Footer = () => {
         {/* Highlighted main message with enhanced animation and styling - STRONGER COLORS */}
         <div className={`relative mb-6 md:mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 -translate-y-4'}`}>
           {/* Stronger glow background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#9D6FE8]/20 to-transparent rounded-xl blur-md"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF2E93]/20 to-transparent rounded-xl blur-md"></div>
           
           {/* Animated sparkles */}
           <div className="absolute -top-3 -right-1 animate-soft-float" style={{animationDelay: '0.5s'}}>
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
           
           <p className="font-dancing text-xl md:text-2xl lg:text-3xl text-[#F7C530] royal-text tracking-wide relative inline-block">
-            <span className="bg-gradient-to-r from-[#9D6FE8] to-[#9D6FE8] bg-[length:0px_2px] hover:bg-[length:100%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 pb-1">
+            <span className="bg-gradient-to-r from-[#FF2E93] to-[#FF2E93] bg-[length:0px_2px] hover:bg-[length:100%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 pb-1">
               Esperamos por você neste dia especial!
             </span>
             <div className="absolute -right-2 top-0 animate-soft-pulse">
@@ -89,7 +89,7 @@ const Footer = () => {
           <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[#F7C530]/40 font-serif text-3xl">❞</div>
           
           <p className="font-cormorant text-xs md:text-sm lg:text-base italic text-white leading-relaxed relative">
-            <span className="bg-gradient-to-r from-[#F7C530] via-[#FF6B99] to-[#F7C530] text-transparent bg-clip-text animate-[text-shimmer_8s_ease-in-out_infinite]">
+            <span className="bg-gradient-to-r from-[#F7C530] via-[#FF2E93] to-[#F7C530] text-transparent bg-clip-text animate-[text-shimmer_8s_ease-in-out_infinite]">
               As lanternas flutuantes simbolizam esperança e sonhos, assim como a luz que cada um de nós carrega dentro de si.
             </span>
           </p>
@@ -100,15 +100,15 @@ const Footer = () => {
           <div className={`flex items-center justify-center text-xs md:text-sm text-white mb-5 md:mb-6 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 -translate-y-4'}`}>
             <div className="relative inline-flex items-center group">
               <span>Feito com </span>
-              <Heart className="h-3 w-3 md:h-3.5 md:w-3.5 mx-1 md:mx-1.5 text-[#FF6B99] animate-soft-pulse" fill="currentColor" />
+              <Heart className="h-3 w-3 md:h-3.5 md:w-3.5 mx-1 md:mx-1.5 text-[#FF2E93] animate-soft-pulse" fill="currentColor" />
               <span> para a </span>
-              <span className="relative font-dancing text-sm md:text-base text-[#FF6B99] ml-1 group-hover:scale-110 transition-transform duration-300">
+              <span className="relative font-dancing text-sm md:text-base text-[#FF2E93] ml-1 group-hover:scale-110 transition-transform duration-300">
                 Liz
                 <span className="absolute -top-1 -right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Crown className="h-2.5 w-2.5 text-[#F7C530]" />
                 </span>
                 {/* Animated underline effect */}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#FF6B99] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#FF2E93] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </span>
             </div>
           </div>

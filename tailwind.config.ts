@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,7 +72,7 @@ export default {
 					blue: '#C5DFFF',
 					gold: '#FFD700',
 				},
-				// Royal theme colors - cores mais intensas
+				// Royal theme colors - cores mais intensas e vibrantes
 				royal: {
 					gold: '#F7C530',          // Dourado mais vibrante
 					cream: '#FFF8E1',
@@ -80,8 +81,8 @@ export default {
 					purple: '#6D2B9A',        // Roxo mais profundo
 					lilac: '#CC8DE0',         // Lilás mais vibrante
 					lavender: '#9D6FE8',      // Lavanda mais saturado
-					pink: '#FF6B99',          // Rosa mais vibrante
-					'pink-light': '#FFB1D0',  // Rosa claro mais colorido
+					pink: '#FF2E93',          // Rosa mais vibrante e forte
+					'pink-light': '#FF8BC5',  // Rosa claro mais colorido
 					'gold-light': '#FFDA55',  // Dourado claro mais intenso
 				}
 			},
