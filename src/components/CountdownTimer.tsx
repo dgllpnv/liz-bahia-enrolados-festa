@@ -43,9 +43,15 @@ const CountdownTimer = () => {
 
   return (
     <div className="mb-16 mt-8">
-      <h3 className="font-cinzel text-4xl md:text-5xl text-center mb-10 text-royal-gold font-bold" style={{ textShadow: '0 0 12px rgba(247, 197, 48, 0.5)' }}>
-        Contagem Regressiva
-      </h3>
+      {/* Updated heading to match "Detalhes do Evento" styling */}
+      <div className="flex items-center justify-center mb-12 relative">
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9D6FE8]/60 to-transparent"></div>
+        <h2 className="tangled-heading mx-6 text-[#7E69AB] drop-shadow-md relative">
+          Contagem Regressiva
+          <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-royal-gold/60 to-transparent opacity-70"></span>
+        </h2>
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9D6FE8]/60 to-transparent"></div>
+      </div>
       
       <div className="flex flex-wrap justify-center gap-8">
         <TimeBox value={timeLeft.days} label="Dias" />

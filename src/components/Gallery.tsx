@@ -59,15 +59,15 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="section-container scroll-animation">
-      <h2 className="tangled-heading mb-14 text-royal-gold font-bold text-3xl md:text-4xl relative" 
-          style={{ textShadow: '0 0 12px rgba(247, 197, 48, 0.5)' }}>
-        Nossa Princesa
-        {/* Decorações florais mais delicadas no título */}
-        <span className="absolute -top-5 -left-4 text-2xl text-rapunzel-pink text-opacity-40">❀</span>
-        <span className="absolute -bottom-5 -right-4 text-2xl text-rapunzel-gold text-opacity-40">❀</span>
-        <span className="absolute top-0 left-10 text-xl text-rapunzel-gold text-opacity-30">✿</span>
-        <span className="absolute bottom-0 right-10 text-xl text-rapunzel-pink text-opacity-30">✿</span>
-      </h2>
+      {/* Updated heading to match "Detalhes do Evento" styling */}
+      <div className="flex items-center justify-center mb-12 relative">
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9D6FE8]/60 to-transparent"></div>
+        <h2 className="tangled-heading mx-6 text-[#7E69AB] drop-shadow-md relative">
+          Nossa Princesa
+          <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-royal-gold/60 to-transparent opacity-70"></span>
+        </h2>
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9D6FE8]/60 to-transparent"></div>
+      </div>
       
       <div className="max-w-3xl mx-auto relative">
         {/* Moldura mais refinada com sombras melhoradas */}
@@ -159,4 +159,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
