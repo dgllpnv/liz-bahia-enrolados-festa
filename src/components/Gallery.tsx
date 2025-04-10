@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Flower } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Preparando para 20 fotos
-const photoNames = Array.from({ length: 20 }, (_, i) => `/gallery/photo${i + 1}.jpg`);
+const photoNames = Array.from({ length: 20 }, (_, i) => `/gallery/photo${i + 1}.jpeg`);
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
