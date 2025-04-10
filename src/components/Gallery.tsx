@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Flower } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-// Preparando para 20 fotos
-const photoNames = Array.from({ length: 20 }, (_, i) => `/gallery/photo${i + 1}.jpeg`);
+// Correção das extensões de arquivo para as fotos disponíveis
+const photoNames = Array.from({ length: 5 }, (_, i) => `/gallery/photo${i + 1}.jpeg`);
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +26,12 @@ const Gallery = () => {
         }
       }
       
-      setLoadedPhotos(availablePhotos);
+      if (availablePhotos.length > 0) {
+        console.log(`Encontradas ${availablePhotos.length} fotos`, availablePhotos);
+        setLoadedPhotos(availablePhotos);
+      } else {
+        console.log('Nenhuma foto encontrada');
+      }
     };
     
     checkImagesExist();
