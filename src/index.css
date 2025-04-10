@@ -302,6 +302,26 @@
   }
 }
 
+@keyframes scan-line {
+  0% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(180px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line 3s ease-in-out infinite;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, rgba(255,255,255,0) 70%);
+}
+
 @font-face {
   font-family: 'Tangled';
   font-style: normal;
