@@ -133,30 +133,30 @@ const EventDetails = () => {
             <DetailItem 
               icon={<Calendar className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Data" 
-              value="Em breve"
+              value="26/04/2025"
               isActive={activeHighlight === 0}
             />
             
             <DetailItem 
               icon={<Clock className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Horário" 
-              value="A confirmar"
+              value="18h"
               isActive={activeHighlight === 1}
             />
             
             <DetailItem 
               icon={<MapPin className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Local" 
-              value="A confirmar" 
-              subtext="Detalhes serão enviados em breve"
+              value="MUNDO CARAMELO" 
+              subtext="(antigo TERRA DO NUNCA), R. João Chagas Ortins de Freitas, 5 - Buraquinho, Lauro de Freitas - BA, 42710-610"
               isActive={activeHighlight === 2}
             />
             
             <DetailItem 
               icon={<Car className="text-[#7E69AB] drop-shadow-md" size={28} />} 
               label="Estacionamento" 
-              value="A confirmar"
-              subtext="Informações serão fornecidas posteriormente"
+              value="Mais Empresarial"
+              subtext="R. João Chagas Ortins de Freitas, 610 - Buraquinho, Lauro de Freitas - BA, 42700-000"
               isActive={activeHighlight === 3}
             />
           </div>
